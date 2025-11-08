@@ -1,0 +1,1744 @@
+{
+  "contexts": [
+    {
+      "id": "gpt_departure_001",
+      "airport": "KSEA",
+      "focus": "Climb Gradient / SID Compliance",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_001_step_1",
+          "situation": "ASA451 (KSEA) contacts you: 'Seattle Departure, Alaska 451, climbing 4,000 feet, SUMDI 3 departure.'",
+          "options": [
+            {
+              "response": "Alaska 451, Seattle Departure, radar contact. Climb and maintain Flight Level 230.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Alaska 451, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Alaska 451, contact Center 133.9.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Alaska 451, squawk 4501.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_001_step_2",
+          "situation": "ASA451: 'Departure, Alaska 451, we're showing max performance, unable to meet the 5.8% gradient for the SUMDI departure.'",
+          "options": [
+            {
+              "response": "Alaska 451, roger. Turn right heading 030, radar vectors, maintain 7,000. Be advised of mountainous terrain.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Alaska 451, roger, advise when able to meet gradient.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Alaska 451, you must comply with the SID gradient.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Alaska 451, descend 3,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_001_step_3",
+          "situation": "ASA451 is on heading 030, climbing 7,000. You must get them back on course or hand them off.",
+          "options": [
+            {
+              "response": "Alaska 451, clear of terrain. Resume SUMDI departure, climb and maintain Flight Level 230.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Alaska 451, proceed direct SUMDI.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Alaska 451, stop climb 7,000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Alaska 451, contact Tower 118.3.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_001_step_4",
+          "situation": "ASA451 is re-established on the SID, passing FL180.",
+          "options": [
+            {
+              "response": "Alaska 451, contact Seattle Center on 128.55.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Alaska 451, contact Center.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Alaska 451, descend and maintain 10,000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Alaska 451, report passing FL200.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_002",
+      "airport": "EDDM",
+      "focus": "Speed Restriction",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_002_step_1",
+          "situation": "DLH456 (EDDM) contacts you: 'München Departure, Lufthansa 456, climbing 5,000 feet, KUNGA 2D departure.'",
+          "options": [
+            {
+              "response": "Lufthansa 456, München Departure, radar contact. Climb and maintain Flight Level 240.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Lufthansa 456, radar contact. Climb FL240.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Lufthansa 456, squawk 7000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Lufthansa 456, expect vectors.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_002_step_2",
+          "situation": "DLH456: 'Departure, Lufthansa 456, request to delete speed restriction, high speed.' The SID has a 'MAX 220 knots' restriction until 10,000 feet.",
+          "options": [
+            {
+              "response": "Lufthansa 456, unable high speed, maintain max 220 knots until 10,000 feet.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Lufthansa 456, unable.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Lufthansa 456, roger, maintain 250 knots.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Lufthansa 456, speed restriction deleted.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_002_step_3",
+          "situation": "DLH456 is now passing 9,000 feet, and you observe their ground speed increasing, indicating an airspeed above 220 knots.",
+          "options": [
+            {
+              "response": "Lufthansa 456, verify speed, maintain max 220 knots until 10,000 feet.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Lufthansa 456, slow down.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Lufthansa 456, you are violating the speed restriction, report to the authorities.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Lufthansa 456, increase speed 250 knots.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_002_step_4",
+          "situation": "DLH456 has complied, passed 10,000 feet, and is now climbing through FL210.",
+          "options": [
+            {
+              "response": "Lufthansa 456, contact München Control on 132.8.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Lufthansa 456, contact Center 132.8.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Lufthansa 456, report reaching FL240.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Lufthansa 456, descend 10,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_003",
+      "airport": "OMDB",
+      "focus": "Weather Deviation",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_003_step_1",
+          "situation": "EKA007 (OMDB) contacts you: 'Dubai Departure, Emirates 007, climbing 7,000 feet, BOKMI 2A departure.'",
+          "options": [
+            {
+              "response": "Emirates 007, Dubai Departure, radar contact. Climb and maintain Flight Level 200.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates 007, climb Flight Level 200.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Emirates 007, contact Abu Dhabi Control.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates 007, Dubai Departure, radar contact. Stop climb 7,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_003_step_2",
+          "situation": "EKA007: 'Departure, Emirates 007, request 30 degrees right for weather.' Your radar shows a significant cell on their track.",
+          "options": [
+            {
+              "response": "Emirates 007, deviation 30 degrees right approved, advise when able to resume navigation.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates 007, deviation approved.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Emirates 007, unable, maintain SID.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates 007, turn left heading 270.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_003_step_3",
+          "situation": "EKA007 is now clear of the weather. EKA007: 'Departure, Emirates 007, clear of weather, request direct BOKMI.'",
+          "options": [
+            {
+              "response": "Emirates 007, cleared direct BOKMI, resume SID.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates 007, proceed direct BOKMI.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Emirates 007, fly heading 310.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates 007, resume SID.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_003_step_4",
+          "situation": "EKA007 is proceeding direct BOKMI, climbing through FL170.",
+          "options": [
+            {
+              "response": "Emirates 007, contact Emirates Control on 125.45.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates 007, contact Center 125.45.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Emirates 007, report reaching FL200.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates 007, frequency change approved.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_004",
+      "airport": "SBGR",
+      "focus": "SID Readback Error",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_004_step_1",
+          "situation": "TAM301 (SBGR) contacts you: 'São Paulo Departure, TAM 301, climbing 7,000 feet, EKPOD 2A departure.'",
+          "options": [
+            {
+              "response": "TAM 301, São Paulo Departure, radar contact. Climb and maintain Flight Level 190.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "TAM 301, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "TAM 301, squawk 2000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "TAM 301, contact Curitiba Center.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_004_step_2",
+          "situation": "Due to traffic, you need to amend the SID. You: 'TAM 301, amend SID, fly the EKPOD 2B departure.' TAM301 replies: 'Fly the EKPOD 2C departure, TAM 301.'",
+          "options": [
+            {
+              "response": "Negative, TAM 301. I repeat, fly the EKPOD 2 B (Bravo) departure.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "TAM 301, that is incorrect. Fly the EKPOD 2B.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "TAM 301, roger, EKPOD 2C.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "TAM 301, affirmative.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_004_step_3",
+          "situation": "TAM301 correctly reads back 'EKPOD 2 Bravo'. The aircraft begins the turn for the new track.",
+          "options": [
+            {
+              "response": "TAM 301, readback correct. Continue climb Flight Level 190.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "TAM 301, correct.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "TAM 301, descend 5,000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "TAM 301, turn right heading 180.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_004_step_4",
+          "situation": "TAM301 is now established on the EKPOD 2B track, climbing through FL160.",
+          "options": [
+            {
+              "response": "TAM 301, contact Curitiba Center on 129.7.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "TAM 301, contact Center.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "TAM 301, report established.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "TAM 301, maintain FL160.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_005",
+      "airport": "KSEA",
+      "focus": "Weather Deviation / Terrain",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_005_step_1",
+          "situation": "DAL123 (KSEA) checks in: 'Seattle Departure, Delta 123, climbing 6,000, JEFFA 4 departure.'",
+          "options": [
+            {
+              "response": "Delta 123, Seattle Departure, radar contact. Climb and maintain 12,000.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Delta 123, contact Center 133.9.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, squawk 1200.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_005_step_2",
+          "situation": "DAL123: 'Departure, Delta 123, we're painting weather 10 miles ahead, request 15 degrees left to deviate.' This deviation heads towards Mount Rainier (14,411 ft).",
+          "options": [
+            {
+              "response": "Delta 123, unable deviation left due to terrain. Can you accept a deviation 20 degrees right?",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, deviation approved.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, maintain SID, weather is not significant.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, deviation 15 degrees left approved, advise when clear.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_005_step_3",
+          "situation": "DAL123: 'Affirm, 20 degrees right is acceptable, Delta 123.'",
+          "options": [
+            {
+              "response": "Delta 123, deviation 20 degrees right approved. Report when able to resume JEFFA departure.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, roger.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Delta 123, turn right heading 290.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, cancel SID, expect vectors.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_005_step_4",
+          "situation": "DAL123 is clear of weather, back on the SID, and climbing through 11,000 feet.",
+          "options": [
+            {
+              "response": "Delta 123, climb and maintain Flight Level 230, contact Seattle Center 128.55.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, contact Center 128.55.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Delta 123, maintain 12,000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Delta 123, report passing Mount Rainier.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_006",
+      "airport": "EDDM",
+      "focus": "Handoff (Slow Climb)",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_006_step_1",
+          "situation": "BAW987 (EDDM) contacts you: 'München Departure, Speedbird 987, climbing 4,000 feet, RILAX 3D.'",
+          "options": [
+            {
+              "response": "Speedbird 987, München Departure, radar contact. Climb and maintain Flight Level 220.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Speedbird 987, radar contact. Climb FL220.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Speedbird 987, maintain 4,000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Speedbird 987, contact München Control 132.8.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_006_step_2",
+          "situation": "BAW987 is heavy and climbing slowly. They are approaching the edge of your sector (FL200) but are only at FL170.",
+          "options": [
+            {
+              "response": "Speedbird 987, continue climb Flight Level 220, report passing Flight Level 190.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Speedbird 987, contact München Control 132.8.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Speedbird 987, expedite your climb.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Speedbird 987, stop climb FL170.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_006_step_3",
+          "situation": "BAW987: 'Reporting Flight Level 190, Speedbird 987.' They are now 2 miles from the boundary.",
+          "options": [
+            {
+              "response": "Speedbird 987, roger. Contact München Control on 132.8.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Speedbird 987, report reaching FL220.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Speedbird 987, turn left heading 180.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Speedbird 987, contact Control.",
+              "isCorrect": false,
+              "isPartial": true
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_006_step_4",
+          "situation": "München Control calls you: 'München Control, BAW987 is still on your frequency?'",
+          "options": [
+            {
+              "response": "(Acknowledge error) München Control, roger, handoff is approved, my apologies.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "München Control, I am still working them.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "München Control, tell them to contact me.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "München Control, I already handed them off.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_007",
+      "airport": "OMDB",
+      "focus": "Speed Restriction (Violation)",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_007_step_1",
+          "situation": "QTR123 (OMDB) checks in: 'Dubai Departure, Qatar 123, climbing 5,000, NIPDA 1A departure.'",
+          "options": [
+            {
+              "response": "Qatar 123, Dubai Departure, radar contact. Climb and maintain Flight Level 190.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Qatar 123, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Qatar 123, contact Emirates Control.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Qatar 123, proceed direct NIPDA.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_007_step_2",
+          "situation": "The NIPDA 1A departure has a speed restriction of 'MAX 210 knots' until 8,000 feet. You observe QTR123's speed at 240 knots, passing 6,000 feet.",
+          "options": [
+            {
+              "response": "Qatar 123, verify speed. Maintain max 210 knots until 8,000 feet per the SID.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Qatar 123, slow down now.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Qatar 123, speed restriction deleted.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Qatar 123, you are too fast.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_007_step_3",
+          "situation": "QTR123: 'Apologies, Departure. Slowing to 210 knots, Qatar 123.' The aircraft reduces speed.",
+          "options": [
+            {
+              "response": "Qatar 123, roger. Continue climb Flight Level 190.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Qatar 123, roger.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Qatar 123, turn left heading 180.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Qatar 123, advise reason for deviation.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_007_step_4",
+          "situation": "QTR123 is past 8,000 feet, speed 250 knots, climbing through FL160.",
+          "options": [
+            {
+              "response": "Qatar 123, contact Emirates Control on 125.45.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Qatar 123, report speed.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Qatar 123, contact Center 125.45.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Qatar 123, maintain FL160.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_008",
+      "airport": "SBGR",
+      "focus": "Climb Gradient / Terrain",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_008_step_1",
+          "situation": "GOL789 (SBGR) contacts you: 'São Paulo Departure, GOL 789, climbing 8,000, BITLA 1A departure.'",
+          "options": [
+            {
+              "response": "GOL 789, São Paulo Departure, radar contact. Climb and maintain Flight Level 210.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "GOL 789, maintain 8,000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "GOL 789, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "GOL 789, squawk 4321.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_008_step_2",
+          "situation": "GOL789: 'Departure, GOL 789, unable to meet the 6.2% gradient on the BITLA departure due to performance.' SBGR is high elevation and surrounded by terrain.",
+          "options": [
+            {
+              "response": "GOL 789, roger. Maintain 8,000, turn left heading 270, radar vectors for terrain.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "GOL 789, you must comply with the SID.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "GOL 789, roger, advise when able.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "GOL 789, descend 6,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_008_step_3",
+          "situation": "GOL789 is on heading 270, clear of the immediate terrain. GOL789: 'Departure, GOL 789, we are now able to resume climb.'",
+          "options": [
+            {
+              "response": "GOL 789, roger. Proceed direct BITLA, resume SID, climb and maintain Flight Level 210.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "GOL 789, proceed direct BITLA.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "GOL 789, maintain heading 270.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "GOL 789, report reaching FL100.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_008_step_4",
+          "situation": "GOL789 is re-established, climbing through FL180.",
+          "options": [
+            {
+              "response": "GOL 789, contact Curitiba Center on 129.7.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "GOL 789, contact Center.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "GOL 789, stop climb FL180.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "GOL 789, report speed.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_009",
+      "airport": "KSEA",
+      "focus": "Speed Restriction (Traffic)",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_009_step_1",
+          "situation": "UAL550 (KSEA) checks in: 'Seattle Departure, United 550, climbing 5,000, SUMDI 3 departure.'",
+          "options": [
+            {
+              "response": "United 550, Seattle Departure, radar contact. Climb and maintain 12,000.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "United 550, contact Center.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, stop climb 5,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_009_step_2",
+          "situation": "You have faster traffic (DAL123) overtaking UAL550. Both are on the SUMDI SID. You need to create space.",
+          "options": [
+            {
+              "response": "United 550, reduce speed to 210 knots.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, increase speed.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, turn right 30 degrees.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, speed 210.",
+              "isCorrect": false,
+              "isPartial": true
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_009_step_3",
+          "situation": "DAL123 has passed UAL550. UAL550 is now at 210 knots.",
+          "options": [
+            {
+              "response": "United 550, resume normal speed, climb and maintain Flight Level 230.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, resume speed.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "United 550, maintain 210 knots.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, proceed direct SUMDI.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_009_step_4",
+          "situation": "UAL550 is climbing through FL200.",
+          "options": [
+            {
+              "response": "United 550, contact Seattle Center on 128.55.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, contact Center.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "United 550, report passing FL220.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "United 550, contact Approach.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_010",
+      "airport": "EDDM",
+      "focus": "SID Amendment",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_010_step_1",
+          "situation": "AFR221 (EDDM) contacts you: 'München Departure, Air France 221, 6,000 feet, KUNGA 2D.'",
+          "options": [
+            {
+              "response": "Air France 221, München Departure, radar contact. Climb and maintain Flight Level 240.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Air France 221, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Air France 221, descend 4,000.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Air France 221, squawk 2000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_010_step_2",
+          "situation": "München Control requests you re-route AFR221 due to military activity. You need to switch them to the RILAX SID.",
+          "options": [
+            {
+              "response": "Air France 221, amend SID. Stop climb 7,000. Turn right heading 090, radar vectors, expect RILAX 3D departure.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Air France 221, turn right heading 090.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Air France 221, amend SID, fly RILAX 3D.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Air France 221, return to München.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_010_step_3",
+          "situation": "AFR221 is on heading 090. You need to get them established on the new SID.",
+          "options": [
+            {
+              "response": "Air France 221, cleared direct RILAX, resume RILAX 3D departure. Climb and maintain Flight Level 240.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Air France 221, proceed direct RILAX.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Air France 221, maintain heading 090.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Air France 221, report RILAX.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_010_step_4",
+          "situation": "AFR221 is established on the RILAX SID, climbing through FL200.",
+          "options": [
+            {
+              "response": "Air France 221, contact München Control on 132.8.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Air France 221, contact Control.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Air France 221, stop climb FL200.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Air France 221, contact Tower.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_011",
+      "airport": "OMDB",
+      "focus": "Handoff (Altitude Error)",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_011_step_1",
+          "situation": "SIA330 (OMDB) contacts you: 'Dubai Departure, Singapore 330, climbing 7,000, BOKMI 2A.'",
+          "options": [
+            {
+              "response": "Singapore 330, Dubai Departure, radar contact. Climb and maintain Flight Level 190.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Singapore 330, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Singapore 330, contact Center.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Singapore 330, climb FL190.",
+              "isCorrect": false,
+              "isPartial": true
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_011_step_2",
+          "situation": "SIA330 is climbing through FL160. You: 'Singapore 330, contact Emirates Control on 125.45.' SIA330 replies: 'Contacting Center 125.45, but our cleared level is Flight Level 190, we are at Flight Level 160. Confirm handoff?'",
+          "options": [
+            {
+              "response": "Singapore 330, correction. Maintain this frequency, report passing Flight Level 180.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Singapore 330, affirmative, contact Center now.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Singapore 330, roger.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Singapore 330, stop climb FL160.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_011_step_3",
+          "situation": "SIA330: 'Passing Flight Level 180, Singapore 330.'",
+          "options": [
+            {
+              "response": "Singapore 330, roger. Contact Emirates Control on 125.45.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Singapore 330, contact Center.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Singapore 330, report reaching FL190.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Singapore 330, expedite climb.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_011_step_4",
+          "situation": "Emirates Control calls you: 'Departure, SIA330 handoff was early.'",
+          "options": [
+            {
+              "response": "Emirates Control, apologies, acknowledged. I recalled them and handed off at FL180.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates Control, they were at the correct altitude.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Emirates Control, roger.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Emirates Control, they requested it.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_012",
+      "airport": "SBGR",
+      "focus": "Weather Deviation (Multiple)",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_012_step_1",
+          "situation": "AZU456 (SBGR) contacts you: 'São Paulo Departure, Azul 456, climbing 7,000, EKPOD 2A.' A large weather system is on the SID track.",
+          "options": [
+            {
+              "response": "Azul 456, São Paulo Departure, radar contact. Climb and maintain Flight Level 200. Be advised, weather on track 20 miles ahead.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Azul 456, radar contact. Climb FL200.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Azul 456, return to airport.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Azul 456, contact Center.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_012_step_2",
+          "situation": "AZU456: 'Departure, Azul 456, request 20 degrees left for weather.' Simultaneously, TAM301 (also on frequency) requests '30 degrees right for weather.'",
+          "options": [
+            {
+              "response": "Azul 456, deviation 20 degrees left approved. TAM301, standby. ... TAM301, deviation 30 degrees right approved. Advise when clear.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Azul 456, approved. TAM301, approved.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Azul 456, unable. TAM301, unable. Maintain SID.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Azul 456, turn left heading 300. TAM301, turn right heading 040.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_012_step_3",
+          "situation": "AZU456: 'Azul 456, clear of weather, request direct EKPOD.'",
+          "options": [
+            {
+              "response": "Azul 456, cleared direct EKPOD, resume SID.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Azul 456, direct EKPOD.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Azul 456, maintain current heading.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Azul 456, report EKPOD.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_012_step_4",
+          "situation": "AZU456 is re-established, climbing through FL180.",
+          "options": [
+            {
+              "response": "Azul 456, contact Curitiba Center on 129.7.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Azul 456, contact Center.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Azul 456, climb FL250.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Azul 456, stop climb FL180.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_013",
+      "airport": "KSEA",
+      "focus": "Handoff (Wrong Sector)",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_013_step_1",
+          "situation": "SWA678 (KSEA) checks in: 'Seattle Departure, Southwest 678, climbing 4,000, JEFFA 4 departure.'",
+          "options": [
+            {
+              "response": "Southwest 678, Seattle Departure, radar contact. Climb and maintain Flight Level 230.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Southwest 678, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Southwest 678, contact Center.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Southwest 678, maintain 4,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_013_step_2",
+          "situation": "SWA678 is climbing through FL200. You: 'Southwest 678, contact Seattle Center on 133.9.' (This is the North sector; JEFFA goes to the South sector).",
+          "options": [
+            {
+              "response": "(Self-correction) Correction, Southwest 678, contact Seattle Center on 128.55.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Southwest 678, contact Seattle Center on 133.9.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Southwest 678, contact Center 133.9.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Southwest 678, report reaching FL230.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_013_step_3",
+          "situation": "SWA678 calls back: 'Departure, Southwest 678, Center says we are on the wrong frequency, advise?'",
+          "options": [
+            {
+              "response": "Southwest 678, roger. Apologies. Contact Seattle Center on 128.55.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Southwest 678, contact 133.9 again.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Southwest 678, standby.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Southwest 678, return to this frequency, maintain FL200.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_013_step_4",
+          "situation": "You must coordinate the error with the North sector controller (133.9).",
+          "options": [
+            {
+              "response": "(Call 133.9) 'Center, Departure, apologies for the bad handoff on Southwest 678, I've re-routed them to 128.55.'",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "(Call 133.9) 'Center, Departure, take Southwest 678.'",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "(Call 128.55) 'Center, Departure, Southwest 678 is with you.'",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "(Do nothing, assume the pilot fixed it).",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_014",
+      "airport": "EDDM",
+      "focus": "Climb Gradient (Noise Abatement)",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_014_step_1",
+          "situation": "RYR199 (EDDM) checks in: 'München Departure, Ryanair 199, 5,000 feet, RILAX 3D.'",
+          "options": [
+            {
+              "response": "Ryanair 199, München Departure, radar contact. Climb and maintain Flight Level 220.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Ryanair 199, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Ryanair 199, contact Control.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Ryanair 199, maintain 5,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_014_step_2",
+          "situation": "RYR199: 'Departure, Ryanair 199, unable to meet the noise abatement gradient for RILAX 3D.'",
+          "options": [
+            {
+              "response": "Ryanair 199, roger. Maintain 6,000. Turn left heading 040, radar vectors, advise when able to resume normal climb.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Ryanair 199, roger, advise when able.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Ryanair 199, noise abatement gradient is mandatory.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Ryanair 199, descend 4,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_014_step_3",
+          "situation": "RYR199 is on heading 040, clear of noise-sensitive areas. RYR199: 'Departure, Ryanair 199, able to resume climb.'",
+          "options": [
+            {
+              "response": "Ryanair 199, roger. Proceed direct RILAX, resume SID, climb and maintain Flight Level 220.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Ryanair 199, proceed direct RILAX.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Ryanair 199, maintain heading 040.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Ryanair 199, report RILAX.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_014_step_4",
+          "situation": "RYR199 is re-established, climbing FL190.",
+          "options": [
+            {
+              "response": "Ryanair 199, contact München Control on 132.8.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Ryanair 199, contact Center.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Ryanair 199, stop climb FL190.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Ryanair 199, report reaching FL220.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gpt_departure_015",
+      "airport": "OMDB",
+      "focus": "SID Readback (Transition)",
+      "difficulty": "intermediate",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "id": "gpt_departure_015_step_1",
+          "situation": "THY123 (OMDB) contacts you: 'Dubai Departure, Turkish 123, climbing 4,000 feet, NIPDA 1A departure.'",
+          "options": [
+            {
+              "response": "Turkish 123, Dubai Departure, radar contact. Climb and maintain Flight Level 190.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Turkish 123, radar contact.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Turkish 123, contact Abu Dhabi Control.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Turkish 123, maintain 4,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 2,
+          "id": "gpt_departure_015_step_2",
+          "situation": "You need to change their transition. You: 'Turkish 123, amend SID, fly the NIPDA 1B (Bravo) departure.' THY123 replies: 'NIPDA 1A departure, Turkish 123.'",
+          "options": [
+            {
+              "response": "Negative, Turkish 123. I repeat, fly the NIPDA 1 B (Bravo) departure.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Turkish 123, wrong. Fly the 1B.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Turkish 123, affirmative.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Turkish 123, turn left heading 270.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 3,
+          "id": "gpt_departure_015_step_3",
+          "situation": "THY123: 'Apologies, fly the NIPDA 1 Bravo departure, Turkish 123.' The aircraft begins the turn for the new transition.",
+          "options": [
+            {
+              "response": "Turkish 123, readback correct. Continue climb Flight Level 190.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Turkish 123, correct.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Turkish 123, report NIPDA.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Turkish 123, stop climb 7,000.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        },
+        {
+          "stepNumber": 4,
+          "id": "gpt_departure_015_step_4",
+          "situation": "THY123 is established on the NIPDA 1B, climbing through FL170.",
+          "options": [
+            {
+              "response": "Turkish 123, contact Emirates Control on 125.45.",
+              "isCorrect": true,
+              "isPartial": false
+            },
+            {
+              "response": "Turkish 123, contact Center.",
+              "isCorrect": false,
+              "isPartial": true
+            },
+            {
+              "response": "Turkish 123, maintain FL170.",
+              "isCorrect": false,
+              "isPartial": false
+            },
+            {
+              "response": "Turkish 123, report passing FL180.",
+              "isCorrect": false,
+              "isPartial": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
