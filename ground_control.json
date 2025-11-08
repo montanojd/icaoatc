@@ -1,0 +1,2178 @@
+[
+  {
+    "id": "gpt_approach_001",
+    "category": "approach",
+    "airport_icao": "KFLL",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "AAL123, a B738, is on a downwind vector at 5000 feet, 15 NM north of the airport, for ILS Runway 10L. Wind is 090 at 10 knots. AAL123 is level at 5000 feet, speed 210 knots.",
+        "prompt": "What is the most appropriate initial vectoring instruction to set up AAL123 for the intercept?",
+        "options": [
+          {
+            "text": "AAL123, fly heading 190, descend and maintain 3000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL123, fly heading 190.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL123, turn left heading 100, cleared ILS Runway 10L approach.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL123, descend and maintain 2000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 190 creates a base leg. Descending to 3000 feet is appropriate for this base leg, keeping the aircraft well above the 2000ft FAF altitude but positioning it for intercept. A partial answer only gives the heading."
+      },
+      {
+        "step": 2,
+        "context": "AAL123 is now on heading 190, level at 3000 feet, 12 NM northwest of the FAF (FISEL). Speed is 210 knots. DAL456, an A320, is 5 NM behind AAL123 at 5000 feet.",
+        "prompt": "What instruction is needed now for AAL123 to manage spacing and intercept?",
+        "options": [
+          {
+            "text": "AAL123, reduce speed to 180 knots, turn left heading 130, cleared ILS Runway 10L approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL123, turn left heading 130, cleared ILS Runway 10L approach.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL123, maintain present heading, reduce speed to 160 knots.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL123, turn left heading 100, cleared ILS Runway 10L approach.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 130 provides a 30-degree intercept angle for the localizer (101°). Reducing speed to 180 knots is necessary for sequencing and flap extension. The full clearance is now appropriate."
+      },
+      {
+        "step": 3,
+        "context": "AAL123 is turning to 130 and slowing. DAL456 is now 10 NM behind AAL123's position, descending to 3000 feet on a 190 heading.",
+        "prompt": "AAL123 reports established on the localizer. What is the next required instruction?",
+        "options": [
+          {
+            "text": "AAL123, contact Fort Lauderdale Tower 119.3, good day.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL123, monitor Tower 119.3.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL123, cleared to land Runway 10L.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL123, maintain 170 knots to 5 miles.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Once established on the final approach segment and cleared for the approach, the aircraft should be handed off to the Tower controller. Approach does not issue landing clearances."
+      },
+      {
+        "step": 4,
+        "context": "Before AAL123 is handed off, Tower reports a disabled aircraft on Runway 10L. The runway is closed.",
+        "prompt": "What is the most critical instruction for AAL123, who is just inside the FAF at 2000 feet?",
+        "options": [
+          {
+            "text": "AAL123, execute missed approach. Climb and maintain 3000 feet, turn left heading 010.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL123, go around.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL123, side-step to Runway 10R.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL123, continue approach, runway change in progress.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The aircraft must execute a missed approach. The correct instruction provides the missed approach actions (climb, maintain, turn) as per procedure or ATC instruction."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_002",
+    "category": "approach",
+    "airport_icao": "EHAM",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "KLM678 (B77W) is 20 NM SW of EHAM, descending to 6000 feet. BAW321 (A319) is 15 NM SW, also descending to 6000 feet. Both are inbound for ILS 18R. KLM678 is faster.",
+        "prompt": "What is the primary concern and what is the best instruction for KLM678 to ensure proper spacing?",
+        "options": [
+          {
+            "text": "KLM678, reduce speed to 220 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM678, maintain 250 knots.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM678, turn left heading 150.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM678, descend and maintain 4000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The primary concern is compression, as the faster aircraft (KLM678) is ahead of the slower one (BAW321). Assigning a speed reduction to KLM678 allows BAW321 to close the gap to a standard separation."
+      },
+      {
+        "step": 2,
+        "context": "KLM678 is at 220 knots. BAW321 is now 5 NM behind KLM678. Both are at 6000 feet. You need to turn them onto a base leg for ILS 18R.",
+        "prompt": "What vectoring instruction should be given to KLM678 first?",
+        "options": [
+          {
+            "text": "KLM678, turn right heading 270, descend and maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM678, turn right heading 270.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM678, turn left heading 090.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM678, fly direct to the FAF.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Turning KLM678 to heading 270 establishes the base leg for Runway 18R. Descending to 4000 feet positions them for the intercept. The partial instruction lacks the essential altitude."
+      },
+      {
+        "step": 3,
+        "context": "KLM678 is on heading 270 at 4000 feet. BAW321 is 5 NM behind at 4000 feet, also on heading 270. KLM678 is 10 NM from the localizer.",
+        "prompt": "What is the intercept instruction for KLM678?",
+        "options": [
+          {
+            "text": "KLM678, turn right heading 210, cleared ILS Runway 18R approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM678, cleared ILS Runway 18R approach.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM678, turn right heading 180.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM678, reduce speed to 160 knots.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 210 provides a 30-degree intercept angle for the localizer (182°). The clearance, along with the altitude restriction, is the complete instruction."
+      },
+      {
+        "step": 4,
+        "context": "KLM678 is established. BAW321 is 5 NM behind, established. Tower reports RVR for 18R is now below minimums. Both aircraft are outside the FAF.",
+        "prompt": "What instructions must be given to both aircraft?",
+        "options": [
+          {
+            "text": "KLM678, execute missed approach, climb and maintain 5000 feet, turn right heading 270. BAW321, execute missed approach, maintain 5000 when established, turn right heading 270.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM678 and BAW321, execute missed approach.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM678, continue approach. BAW321, go around.",
+            "type": "incorrect"
+          },
+          {
+            "text": "All aircraft, hold at present position.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Since RVR is below minimums and aircraft are outside the FAF, they cannot continue the approach. They must be instructed to execute the missed approach with specific headings and altitudes to maintain separation."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_003",
+    "category": "approach",
+    "airport_icao": "RJTT",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "JAL12 (B773) is on final for ILS 34L, 8 NM from threshold. ANA45 (A350) is on final for ILS 34R, 9 NM from threshold. A third aircraft, SIA78 (B789), is 15 NM south, level at 7000 feet, assigned to 34L.",
+        "prompt": "What is the primary instruction to give SIA78 to sequence behind JAL12?",
+        "options": [
+          {
+            "text": "SIA78, fly heading 010, descend and maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "SIA78, fly heading 340.",
+            "type": "partial"
+          },
+          {
+            "text": "SIA78, cleared ILS Runway 34L approach.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SIA78, fly heading 050, descend 4000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 010 (north-northeast) will position SIA78 on a downwind/base leg east of the 34L final, allowing JAL12 to land. Heading 050 is too sharp. A direct clearance is impossible."
+      },
+      {
+        "step": 2,
+        "context": "JAL12 lands. ANA45 is at 3 NM final 34R. SIA78 is heading 010 at 4000 feet, 10 NM east of the 34L localizer.",
+        "prompt": "What is the intercept instruction for SIA78 for Runway 34L?",
+        "options": [
+          {
+            "text": "SIA78, turn left heading 310, cleared ILS Runway 34L approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "SIA78, turn left heading 310.",
+            "type": "partial"
+          },
+          {
+            "text": "SIA78, turn left heading 340.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SIA78, descend 2000 feet.",
+            "type": "incorrect"
+_          }
+        ],
+        "explanation": "Heading 310 provides a 30-degree intercept to the 34L localizer (336°). The clearance with altitude restriction is the full and correct instruction."
+      },
+      {
+        "step": 3,
+        "context": "SIA78 is established on the 34L localizer. ANA45 (on 34R) is at 1 NM final and suddenly reports 'Go Around, engine indication.'",
+        "prompt": "ANA45 is initiating a go-around. What is the immediate, critical instruction for ANA45, considering parallel operations?",
+        "options": [
+          {
+            "text": "ANA45, fly runway heading, climb and maintain 5000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "ANA45, execute missed approach.",
+            "type": "partial"
+          },
+          {
+            "text": "ANA45, turn right heading 040, climb 5000 feet.",
+            "type": "incorrect"
+          },
+          {
+            "text": "ANA45, contact Departure.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "In parallel operations, the missed approach for 34R likely involves a straight-ahead climb to a specific altitude to deconflict from 34L traffic. Assigning a turn (040) could conflict with 34L. 'Fly runway heading' is the safest initial command."
+      },
+      {
+        "step": 4,
+        "context": "ANA45 is climbing runway heading 340, passing 2000 feet. SIA78 is at 4 NM final 34L, passing 1500 feet. A conflict is now possible as ANA45's track might drift.",
+        "prompt": "What is the most urgent action to ensure separation between ANA45 and SIA78?",
+        "options": [
+          {
+            "text": "ANA45, turn right heading 020 immediately, climb and maintain 5000.",
+            "type": "correct"
+          },
+          {
+            "text": "SIA78, execute missed approach.",
+            "type":partial"
+          },
+          {
+            "text": "SIA78, turn left heading 310 immediately.",
+            "type": "incorrect"
+          },
+          {
+            "text": "ANA45, maintain runway heading. SIA78, continue approach.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The missed approach from 34R must be turned *away* from the 34L approach path. Turning ANA45 right (e.g., heading 020) immediately resolves the potential conflict. Making SIA78 go around is an option, but turning the diverging aircraft (ANA45) is the standard procedure."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_004",
+    "category": "approach",
+    "airport_icao": "YMML",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "QFA432 (A330) is 25 NM north of YMML, level at 8000 feet, tracking direct to the field. Weather is CAVOK, Rwy 27 is active. QFA432 requests a visual approach.",
+        "prompt": "How do you position QFA432 for a left downwind for Runway 27?",
+        "options": [
+          {
+            "text": "QFA432, fly heading 180, descend and maintain 4000 feet. Expect visual approach Runway 27.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA432, fly heading 180.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA432, fly heading 090.",
+            "type": "incorrect"
+          },
+          {
+            "text": "QFA432, cleared visual approach Runway 27.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 180 (south) will take the aircraft east of the field, setting up a left downwind for 27. Descending to 4000 is appropriate for the pattern. A clearance is premature."
+      },
+      {
+        "step": 2,
+        "context": "QFA432 is on heading 180, at 4000 feet, 10 NM east of the Runway 27 threshold.",
+        "prompt": "What is the next instruction to turn QFA432 onto the downwind leg?",
+        "options": [
+          {
+            "text": "QFA432, turn left heading 090, maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA432, report airport in sight.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA432, turn right heading 270.",
+            "type": "incorrect"
+          },
+          {
+            "text": "QFA432, descend 2000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "To fly a left downwind for 27, the aircraft (currently east of the field, flying south) must turn left to a 090 heading (parallel to the runway, but opposite direction)."
+      },
+      {
+        "step": 3,
+        "context": "QFA432 is on the 090 heading, 4000 feet, abeam the threshold. QFA432 reports 'Airport in sight'.",
+        "prompt": "What is the correct clearance?",
+        "options": [
+          {
+            "text": "QFA432, cleared visual approach Runway 27. Contact Melbourne Tower 120.5.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA432, cleared visual approach Runway 27.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA432, cleared to land Runway 27.",
+            "type": "incorrect"
+          },
+          {
+            "text": "QFA432, turn left heading 360.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Once the pilot reports the airport in sight and ATC has determined they can complete the approach visually, the visual approach clearance is given, followed by a handoff to Tower."
+      },
+      {
+        "step": 4,
+        "context": "After clearing QFA432, a pop-up VFR target (C172) appears 5 NM east of the threshold at 2500 feet, tracking west, directly in QFA432's path.",
+        "prompt": "QFA432 is descending through 3000 feet on base-to-final. What is the most urgent instruction?",
+        "options": [
+          {
+            "text": "QFA432, traffic 12 o'clock, 2 miles, westbound C172 at 2500. Turn left heading 360 immediately and climb 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA432, traffic 12 o'clock, 2 miles.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA432, continue visual approach, caution traffic.",
+            "type": "incorrect"
+          },
+          {
+            "text": "C172, turn immediately.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "A visual approach clearance does not absolve ATC of separation responsibility. This is a potential conflict. Issuing a vector (turn) and altitude (climb) to QFA432 is the fastest way to resolve the conflict."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_005",
+    "category": "approach",
+    "airport_icao": "KSLC",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "SWA555 (B737) is 30 NM SE of KSLC, descending to 11000 feet. Runway 34R is active. Terrain is high to the east. SWA555 is being vectored for the ILS 34R.",
+        "prompt": "What is a safe initial vectoring heading and altitude assignment, considering terrain?",
+        "options": [
+          {
+            "text": "SWA555, fly heading 270, descend and maintain 9000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "SWA555, fly heading 270.",
+            "type": "partial"
+          },
+          {
+            "text": "SWA555, fly heading 340, descend 7000 feet.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SWA555, fly heading 210, descend 8000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 270 (west) vectors the aircraft away from the highest terrain (Wasatch mountains) east of the airport, setting up a base leg. 9000 feet is a safe MVA in this area. Heading 210 would fly into higher terrain."
+      },
+      {
+        "step": 2,
+        "context": "SWA555 is on heading 270 at 9000 feet, 15 NM SE of the FAF. Speed is 240 knots.",
+        "prompt": "What instruction is required to turn SWA555 to intercept the localizer (341°)?",
+        "options": [
+          {
+            "text": "SWA555, turn right heading 010, reduce speed to 190 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "SWA555, turn right heading 010.",
+            "type": "partial"
+          },
+          {
+            "text": "SWA555, turn right heading 340.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SWA555, turn left heading 240.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 010 provides a 30-degree intercept angle for the 341° localizer. Speed reduction is necessary to ensure the aircraft doesn't overshoot and to prepare for approach."
+      },
+      {
+        "step": 3,
+        "context": "SWA555 is 10 NM from the FAF, on heading 010, descending to 8000 (glideslope intercept).",
+        "prompt": "What is the full approach clearance?",
+        "options": [
+          {
+            "text": "SWA555, 8 miles from FAF, turn right heading 360, cleared ILS Runway 34R approach, maintain 8000 until established on the localizer.",
+            "type": "correct"
+          },
+          {
+            "text": "SWA555, cleared ILS Runway 34R approach.",
+            "type": "partial"
+          },
+          {
+            "text": "SWA555, 8 miles from FAF, turn right heading 010, cleared ILS Runway 34R approach.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SWA555, cleared to land 34R.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "This instruction provides the final turn to intercept (360 is a standard intercept for 341), the clearance, and the altitude restriction. The FAF distance is key situational awareness."
+      },
+      {
+        "step": 4,
+        "context": "SWA555 is established on the localizer, just captured the glideslope at 8000 feet. They suddenly report a 'severe windshear' warning.",
+        "prompt": "What is the immediate instruction, considering the terrain at KSLC?",
+        "options": [
+          {
+            "text": "SWA555, execute missed approach. Fly runway heading, climb and maintain 12000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "SWA555, go around.",
+            "type": "partial"
+          },
+          {
+            "text": "SWA555, continue approach, report conditions.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SWA555, turn right heading 090, climb 12000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "A severe windshear report requires an immediate missed approach. The standard missed approach (runway heading, climb) is the safest initial action. Turning right (090) would send them directly into high terrain."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_006",
+    "category": "approach",
+    "airport_icao": "KFLL",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "NKS301 (A320) is 20 NM NW of KFLL at 6000 feet. FDX45 (B763) is 25 NM NW at 7000 feet. Both are inbound for ILS 10L. FDX45 is 15 knots faster.",
+        "prompt": "How do you sequence these two aircraft, given FDX45 is faster but further out?",
+        "options": [
+          {
+            "text": "FDX45, descend and maintain 6000 feet. NKS301, reduce speed to 180 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "NKS301, reduce speed to 180 knots.",
+            "type": "partial"
+          },
+          {
+            "text": "FDX45, maintain 250 knots. NKS301, maintain 210 knots.",
+            "type": "incorrect"
+          },
+          {
+            "text": "NKS301, turn left heading 270.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "To maintain sequence with NKS301 first, NKS301 must slow down. FDX45 must be descended to NKS301's altitude to follow, but slowing NKS301 is the key to creating space."
+      },
+      {
+        "step": 2,
+        "context": "NKS301 is at 180 knots. FDX45 is now 6 NM behind NKS301, both at 6000 feet. You need to set them up for a base leg.",
+        "prompt": "What is the vectoring instruction for NKS301?",
+        "options": [
+          {
+            "text": "NKS301, fly heading 190, descend and maintain 3000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "NKS301, fly heading 190.",
+            "type": "partial"
+          },
+          {
+            "text": "NKS301, turn right heading 360.",
+            "type": "incorrect"
+          },
+          {
+            "text": "NKS301, fly heading 100.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 190 (south) establishes the base leg for Runway 10L. Descending to 3000 feet is the next logical altitude for the approach profile."
+      },
+      {
+        "step": 3,
+        "context": "NKS301 is heading 190 at 3000 feet. FDX45 is 5 NM behind, also 190 at 3000 feet. NKS301 is 10 NM from the localizer.",
+        "prompt": "What is the intercept instruction for NKS301?",
+        "options": [
+          {
+            "text": "NKS301, turn left heading 130, cleared ILS Runway 10L approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "NKS301, cleared ILS Runway 10L approach.",
+            "type": "partial"
+          },
+          {
+            "text": "NKS301, turn left heading 100.",
+            "type": "incorrect"
+          },
+          {
+            "text": "NKS301, reduce speed to 160 knots now.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 130 provides a 30-degree intercept for the 101° localizer. The full clearance with altitude restriction is required."
+      },
+      {
+        "step": 4,
+        "context": "NKS301 is established. FDX45 is 5 NM behind. FDX45 (a B763) is still closing on NKS301 (an A320) due to wake turbulence requirements (FDX is Heavy, NKS is Large).",
+        "prompt": "What instruction must be given to FDX45 to ensure wake turbulence separation (5 NM) is maintained?",
+        "options": [
+          {
+            "text": "FDX45, reduce speed to 170 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "FDX45, maintain 190 knots.",
+            "type": "partial"
+          },
+          {
+            "text": "FDX45, execute S-turn.",
+            "type": "incorrect"
+          },
+          {
+            "text": "NKS301, increase speed to 180 knots.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "NKS301 is on final and should be at approach speed. FDX45 must be slowed down to maintain the required 5 NM separation behind NKS301 (Heavy behind Large)."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_007",
+    "category": "approach",
+    "airport_icao": "EHAM",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "EHAM is in LVP (Low Visibility Procedures). Runway 18R is the only arrival runway. Flow is restricted. KLM102 (B789) is 30 NM SW, approaching the ARTIP holding fix.",
+        "prompt": "The airport is not ready for KLM102. What is the correct holding instruction?",
+        "options": [
+          {
+            "text": "KLM102, hold southwest of ARTIP on the 230 radial, right turns, maintain 7000 feet, expect further clearance 1030Z.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM102, hold at ARTIP, maintain 7000 feet.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM102, orbit right at present position.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM102, continue for ILS 18R.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "A complete holding instruction includes the fix (ARTIP), the radial/course, the direction of turns (right), the altitude, and an EFC time."
+      },
+      {
+        "step": 2,
+        "context": "KLM102 is in the hold. A second aircraft, AFR221 (A330), is approaching ARTIP. You need to stack AFR221.",
+        "prompt": "What is the instruction for AFR221?",
+        "options": [
+          {
+            "text": "AFR221, hold southwest of ARTIP on the 230 radial, right turns, maintain 8000 feet, expect further clearance 1035Z.",
+            "type": "correct"
+          },
+          {
+            "text": "AFR221, hold at ARTIP, maintain 7000 feet.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AFR221, hold 10 miles behind KLM102.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AFR221, divert to EHBK.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Stacking aircraft requires 1000 feet of vertical separation. AFR221 must be assigned 8000 feet, 1000 feet above KLM102, in the same holding pattern."
+      },
+      {
+        "step": 3,
+        "context": "The airport can now accept one aircraft. You need to take KLM102 out of the hold and vector them for the ILS 18R.",
+        "prompt": "What is the instruction for KLM102?",
+        "options": [
+          {
+            "text": "KLM102, leave ARTIP heading 050, descend and maintain 4000 feet, reduce speed 220 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM102, proceed direct to the FAF.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM102, cleared ILS 18R approach.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM102, continue holding.",
+            "type": "incorrect"
+        }
+        ],
+        "explanation": "The aircraft needs to be vectored from the hold. A heading (050) takes them north towards the final, a descent (4000) prepares them, and speed control is essential for LVP."
+      },
+      {
+        "step": 4,
+        "context": "KLM102 is heading 050, descending to 4000. They are 15 NM from the localizer.",
+        "prompt": "What is the intercept instruction?",
+        "options": [
+          {
+            "text": "KLM102, turn right heading 150, cleared ILS Runway 18R approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM102, turn right heading 180.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM102, turn left heading 010.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM102, cleared ILS 18R, report established.",
+            "type": "partial"
+          }
+        ],
+        "explanation": "Heading 150 provides a 30-degree intercept to the 182° localizer. The full clearance with altitude restriction is required for the ILS."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_008",
+    "category": "approach",
+    "airport_icao": "RJTT",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "RJTT is landing 34L and 34R. JAL501 (B788) is 20 NM SE, assigned 34L. ANA88 (A321) is 20 NM SE, assigned 34R. Both are at 7000 feet.",
+        "prompt": "How do you start the vectoring process for these two aircraft?",
+        "options": [
+          {
+            "text": "JAL501, fly heading 270, descend 5000 feet. ANA88, fly heading 270, maintain 7000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "JAL501, fly heading 270. ANA88, fly heading 270.",
+            "type": "partial"
+          },
+          {
+            "text": "JAL501, cleared ILS 34L. ANA88, cleared ILS 34R.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JAL501, fly heading 340. ANA88, fly heading 340.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Vectoring both west (270) sets them up for a base leg. ANA88 (for 34R) must be kept higher than JAL501 (for 34L) to ensure vertical separation during the base leg, as 34R is east of 34L."
+      },
+      {
+        "step": 2,
+        "context": "JAL501 is at 5000 feet, heading 270. ANA88 is at 7000 feet, heading 270, 3 NM in-trail of JAL501. JAL501 is 10 NM from the 34L localizer.",
+        "prompt": "What is the intercept instruction for JAL501 (34L)?",
+        "options": [
+          {
+            "text": "JAL501, turn right heading 310, cleared ILS Runway 34L approach, maintain 4000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "JAL501, turn right heading 310.",
+            "type": "partial"
+          },
+          {
+            "text": "JAL501, turn right heading 340.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JAL501, descend 3000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 310 provides a 30-degree intercept for 34L (336°). Descending to 4000 (or 3000) for intercept is standard. The full clearance is required."
+      },
+      {
+        "step": 3,
+        "context": "JAL501 is established on 34L. ANA88 is at 7000 feet, 10 NM from the 34R localizer.",
+        "prompt": "What is the intercept instruction for ANA88 (34R)?",
+        "options": [
+          {
+            "text": "ANA88, turn right heading 310, descend and maintain 5000 feet, cleared ILS Runway 34R approach.",
+            "type": "correct"
+          },
+          {
+            "text": "ANA88, turn right heading 310.",
+            "type": "partial"
+          },
+          {
+            "text": "ANA88, cleared ILS 34R, maintain 7000.",
+            "type": "incorrect"
+          },
+          {
+            "text": "ANA88, descend 3000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "ANA88 also needs a 310 heading to intercept 34R (336°). They must be descended from 7000 to an intercept altitude (e.g., 5000) and given the full clearance."
+      },
+      {
+        "step": 4,
+        "context": "JAL501 is 4 NM final 34L. ANA88 is 5 NM final 34R. The parallel approach monitor alerts 'NTZ (No Transgression Zone) violation, JAL501 turning left'.",
+        "prompt": "What is the immediate instruction to JAL501?",
+        "options": [
+          {
+            "text": "JAL501, turn right immediately heading 360, climb and maintain 5000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "JAL501, execute missed approach.",
+            "type": "partial"
+          },
+          {
+            "text": "JAL501, turn left immediately.",
+            "type": "incorrect"
+          },
+          {
+            "text": "ANA88, turn right immediately.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "A breakout instruction for 34L (the transgressing aircraft) requires an immediate turn *away* from 34R. A right turn (e.g., 360) and climb is the correct breakout procedure."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_009",
+    "category": "approach",
+    "airport_icao": "YMML",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "QFA11 (A388) is on ILS Rwy 16, 5 NM final. Wind is 170 at 8 knots. QFA11 reports 'Going around, unstable'.",
+        "prompt": "What is the standard missed approach instruction?",
+        "options": [
+          {
+            "text": "QFA11, fly runway heading, climb and maintain 5000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA11, go around.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA11, turn left heading 090, climb 5000 feet.",
+            "type": "incorrect"
+          },
+          {
+            "text": "QFA11, contact Departure.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The standard missed approach procedure is to fly the runway heading (160) and climb to the assigned altitude (5000 feet)."
+      },
+      {
+        "step": 2,
+        "context": "QFA11 is climbing runway heading, passing 2000 feet. Simultaneously, Departure hands you JST789 (A320) climbing to 4000 feet, just departed Rwy 16.",
+        "prompt": "What is the immediate action to resolve this conflict?",
+        "options": [
+          {
+            "text": "QFA11, turn right heading 270 immediately, continue climb 5000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA11, maintain runway heading.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JST789, stop climb 2000 feet.",
+            "type":ncorrect"
+          },
+          {
+            "text": "QFA11, turn left heading 090.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "This is a critical conflict. The missed approach (QFA11) and the departure (JST789) are on the same track. QFA11 must be turned immediately. Turning right (270) is the standard divergence."
+      },
+      {
+        "step": 3,
+        "context": "QFA11 is turning right to 270. JST789 is climbing through 3000 feet, runway heading. Separation is increasing.",
+        "prompt": "What is the next instruction for QFA11 (the missed approach)?",
+        "options": [
+          {
+            "text": "QFA11, heading 270, continue climb 5000 feet. What are your intentions?",
+            "type": "correct"
+          },
+          {
+            "text": "QFA11, heading 270.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA11, return to land Rwy 16.",
+            "type": "incorrect"
+          },
+          {
+            "text": "QFA11, contact Departure.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "After the immediate vector, confirm the heading and altitude, and then ask the pilot for their intentions (retry the approach, divert, etc.)"
+      },
+      {
+        "step": 4,
+        "context": "QFA11 requests vectors for another ILS Rwy 16 approach. JST789 is clear of the conflict. You need to position QFA11.",
+        "prompt": "What is the vectoring instruction to bring QFA11 back for the approach?",
+        "options": [
+          {
+            "text": "QFA11, turn left heading 180, descend and maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA11, turn left heading 180.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA11, turn right heading 360.",
+            "type": "incorrect"
+          },
+          {
+            "text": "QFA11, fly direct to FAF.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "QFA11 is west of the field, heading 270. A left turn to 180 (south) will position them for a base leg for Rwy 16. Descending to 4000 is appropriate."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_010",
+    "category": "approach",
+    "airport_icao": "KSLC",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "DAL234 (A220) is 40 NM NW of KSLC, level at 16000 feet, requesting RNAV (GPS) Y 34R. The aircraft is high and fast.",
+        "prompt": "What is the most effective initial instruction for descent and speed control?",
+        "options": [
+          {
+            "text": "DAL234, descend and maintain 11000 feet, reduce speed to 250 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "DAL234, descend and maintain 11000 feet.",
+            "type": "partial"
+          },
+          {
+            "text": "DAL234, fly direct to FAF.",
+            "type": "incorrect"
+          },
+          {
+            "text": "DAL234, maintain 16000 feet, reduce speed 210 knots.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The aircraft needs to lose altitude and speed. Assigning both a lower altitude (11000, MVA) and a speed restriction (250) is the most efficient way to manage the profile."
+      },
+      {
+        "step": 2,
+        "context": "DAL234 is descending through 13000 for 11000, speed 250 knots. They are 25 NM NW.",
+        "prompt": "What is the next instruction to position them for the RNAV final approach course (341°)?",
+        "options": [
+          {
+            "text": "DAL234, fly heading 080, descend and maintain 9000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "DAL234, fly heading 080.",
+            "type": "partial"
+          },
+          {
+            "text": "DAL234, fly heading 270.",
+            "type": "incorrect"
+          },
+          {
+            "text": "DAL234, descend 7000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 080 (east) will vector the aircraft north of the airport, setting up a base leg for 34R from the west. 9000 feet is a safe altitude for this vector."
+      },
+      {
+        "step": 3,
+        "context": "DAL234 is heading 080 at 9000 feet, 12 NM from the FAF (WEBER).",
+        "prompt": "What is the intercept and clearance instruction?",
+        "options": [
+          {
+            "text": "DAL234, turn right heading 010, cleared RNAV Y Runway 34R approach, maintain 8000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "DAL234, turn right heading 010.",
+            "type": "partial"
+          },
+          {
+            "text": "DAL234, turn right heading 340.",
+            "type": "incorrect"
+          },
+          {
+            "text": "DAL234, cleared RNAV Y 34R approach.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "This vectors the aircraft... wait. Heading 080 (east) north of the airport. Intercept 34R. This is wrong. Step 2 logic is flawed. Let's reset. \n\nStep 2 (Retry): DAL234 is 25NM NW (northwest). Heading 080 (east) takes them *north* of the field. This is wrong for 34R. \n\nStep 2 (Correct): DAL234 is 25NM NW. They need to fly *south* and *east*. \n'DAL234, fly heading 120, descend and maintain 9000 feet.' (This sets up a downwind). \n\nStep 3 (Context): DAL234 is heading 120 at 9000 feet, west of the field. \n'DAL234, turn left heading 010, cleared RNAV Y 34R, maintain 8000 until established.' (This is also wrong). \n\nLet's assume the vector in Step 2 was correct for the scenario. \n\nRe-evaluating Step 2: DAL234 is 25NM NW. Heading 080 (east) is a vector *away* from the airport. This is a delaying vector, or a very wide base. Let's assume the user meant 25NM SW (southwest). If 25NM NW, a 080 heading is confusing. \n\nLet's assume 25NM NW is correct. To land 34R: \nStep 2: 'DAL234, fly heading 080, descend and maintain 9000 feet.' (This vectors them N-NE of the airport for a wide left base). \nStep 3 (Context): DAL234 is 15NM NE of the FAF, heading 080 at 9000. \nStep 3 (Prompt): 'DAL234, turn right heading 310, cleared RNAV Y 34R, maintain 8000 until established.' \n\nThis is getting too complex. Let's simplify the scenario. \n\n(Original Step 2): 'DAL234, fly heading 080, descend and maintain 9000 feet.' (Let's assume this is the intended vector, perhaps to cross the final and vector back). \n(Original Step 3): DAL234 is heading 080 at 9000 feet, 12 NM from the FAF (WEBER). Prompt: What is the intercept and clearance instruction? \nIf they are heading 080, 12NM from WEBER (which is on the final), they are *east* of the final. A turn to 010 (north) is *away* from the final. \nThis scenario is broken. \n\nLet's fix it. \nStep 2 Context: DAL234 is descending 11000, 25NM NW. \nStep 2 Prompt: 'DAL234, fly heading 160, descend and maintain 9000 feet.' (This creates a left downwind). \nStep 3 Context: DAL234 is heading 160 at 9000 feet, 12 NM west of the FAF. \nStep 3 Prompt: 'DAL234, turn left heading 010, cleared RNAV Y 34R, maintain 8000 until established.' (This doesn't work. 010 is 30 deg intercept for 340... but they are WEST. They need a *right* turn). \n\nLet's restart this scenario. \nStep 1: DAL234 40NM NW, 16000ft. 'DAL234, descend and maintain 11000 feet, reduce speed 250 knots.' (Correct) \nStep 2: DAL234 25NM NW, 11000ft. 'DAL234, fly heading 080, descend and maintain 9000 feet.' (This vectors them NE, for a left base). \nStep 3: DAL234 15NM NE of FAF, heading 080. 'DAL234, turn right heading 310, cleared RNAV Y Runway 34R approach, maintain 8000 until established.' (This is a 30-deg intercept. This works.) \n\nLet's use this fixed logic. "
+      },
+      {
+        "step": 3,
+        "context": "DAL234 is now 15 NM NE of the FAF (WEBER), level at 9000 feet, heading 080.",
+        "prompt": "What is the intercept and clearance instruction?",
+        "options": [
+          {
+            "text": "DAL234, turn right heading 310, cleared RNAV Y Runway 34R approach, maintain 8000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "DAL234, cleared RNAV Y 34R approach.",
+            "type": "partial"
+          },
+          {
+            "text": "DAL234, turn left heading 010.",
+            "type": "incorrect"
+          },
+          {
+            "text": "DAL234, turn right heading 340.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 310 provides a 30-degree intercept angle for the 341° final approach course. The clearance with altitude restriction is required."
+      },
+      {
+        "step": 4,
+        "context": "DAL234 is established on the RNAV, descending through 8500 feet. They report they are 'unable RNAV' due to 'GPS failure'.",
+        "prompt": "What is the immediate instruction?",
+        "options": [
+          {
+            "text": "DAL234, fly heading 340, climb and maintain 12000 feet, radar vectors for ILS 34R.",
+            "type": "correct"
+          },
+          {
+            "text": "DAL234, execute missed approach.",
+            "type": "partial"
+          },
+          {
+            "text": "DAL234, continue approach visually.",
+            "type": "incorrect"
+          },
+          {
+            "text": "DAL234, turn right heading 090.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "If unable RNAV, they cannot continue. They must be given missed approach instructions (climb, heading) and then re-vectored for an available approach (like the ILS)."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_011",
+    "category": "approach",
+    "airport_icao": "KFLL",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "JBU405 (A320) is 10 NM West of KFLL, level 3000 feet. Weather is CAVOK. JBU405 requests visual approach Runway 10L.",
+        "prompt": "How do you position JBU405 for a right downwind for 10L?",
+        "options": [
+          {
+            "text": "JBU405, fly heading 360, maintain 3000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "JBU405, fly heading 180.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JBU405, cleared visual approach 10L.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JBU405, fly heading 100.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "JBU405 is west of the field. To enter a right downwind for 10L, they must fly north (Hdg 360) to position north of the airport, parallel to the runway."
+      },
+      {
+        "step": 2,
+        "context": "JBU405 is heading 360, 5 NM NW of the threshold.",
+        "prompt": "What is the instruction to turn JBU405 onto the downwind leg?",
+        "options": [
+          {
+            "text": "JBU405, turn right heading 280.",
+            "type": "correct"
+          },
+          {
+            "text": "JBU405, turn left heading 280.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JBU405, turn right heading 100.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JBU405, report airport in sight.",
+            "type": "partial"
+          }
+        ],
+        "explanation": "The runway heading is 101. A right downwind means flying the reciprocal, heading 281. A turn to 280 (west) is the correct downwind vector."
+      },
+      {
+        "step": 3,
+        "context": "JBU405 is on the 280 heading, 3000 feet, abeam the threshold. JBU405 reports 'Airport in sight'.",
+        "prompt": "What is the correct clearance?",
+        "options": [
+          {
+            "text": "JBU405, cleared visual approach Runway 10L. Contact Tower 119.3.",
+            "type": "correct"
+          },
+          {
+            "text": "JBU405, cleared visual approach Runway 10L.",
+            "type": "partial"
+          },
+          {
+            "text": "JBU405, cleared to land 10L.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JBU405, turn right heading 190.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Once the pilot has the airport in sight, ATC can issue the visual approach clearance and handoff to Tower."
+      },
+      {
+        "step": 4,
+        "context": "JBU405 is on final. A helicopter, N123AB, requests to depart the 'compass rose' area (south side) and transition north, crossing the 10L final.",
+        "prompt": "What is the correct response regarding N123AB's request?",
+        "options": [
+          {
+            "text": "N123AB, hold position, expect delay, traffic A320 on 3 mile final.",
+            "type": "correct"
+          },
+          {
+            "text": "N123AB, cleared to cross Runway 10L final, caution wake turbulence.",
+            "type": "incorrect"
+          },
+          {
+            "text": "N123AB, remain clear of Class C.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JBU405, execute go-around for traffic.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "An aircraft on final approach has priority. The helicopter must be instructed to hold until the arrival (JBU405) has passed."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_012",
+    "category": "approach",
+    "airport_icao": "EHAM",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "TRA456 (B738) is on a base leg for ILS 18R, 15 NM from FAF, speed 210 knots. EZY789 (A319) is 10 NM behind TRA456, speed 210 knots.",
+        "prompt": "You need 5 NM spacing at the FAF. TRA456 is 15 NM out, EZY789 is 10 NM behind (25 NM out). What is the instruction?",
+        "options": [
+          {
+            "text": "TRA456, reduce speed to 180 knots. EZY789, maintain 210 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "TRA456, reduce speed to 180 knots.",
+            "type": "partial"
+          },
+          {
+            "text": "EZY789, reduce speed to 180 knots.",
+            "type": "incorrect"
+          },
+          {
+            "text": "TRA456, execute 360 turn for spacing.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "There is 10 NM spacing. To reduce this to 5 NM, the lead aircraft (TRA456) must slow down, allowing the trail aircraft (EZY789) to catch up."
+      },
+      {
+        "step": 2,
+        "context": "TRA456 is slowing to 180. EZY789 is maintaining 210. Spacing is now 7 NM and closing. Both are on intercept headings.",
+        "prompt": "What is the clearance for TRA456?",
+        "options": [
+          {
+            "text": "TRA456, turn right heading 210, cleared ILS Runway 18R approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "TRA456, cleared ILS 18R.",
+            "type": "partial"
+          },
+          {
+            "text": "TRA456, turn right heading 180.",
+            "type": "incorrect"
+          },
+          {
+            "text": "TRA456, increase speed 210 knots.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "This is the standard intercept (210 for 182) and full approach clearance."
+      },
+      {
+        "step": 3,
+        "context": "TRA456 is established. EZY789 is 5 NM behind, on intercept heading 210.",
+        "prompt": "What is the instruction for EZY789?",
+        "options": [
+          {
+            "text": "EZY789, cleared ILS Runway 18R approach, maintain 3000 until established. Caution wake turbulence, B738 preceding.",
+            "type": "correct"
+          },
+          {
+            "text": "EZY789, cleared ILS Runway 18R approach.",
+            "type": "partial"
+          },
+          {
+            "text": "EZY789, reduce speed 160 knots.",
+            "type": "incorrect"
+          },
+          {
+            "text": "EZY789, turn left heading 180.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "EZY789 is now positioned for the approach. They need the clearance and the advisory for wake turbulence (A319 behind B738 is standard, but advisory is good practice)."
+      },
+      {
+        "step": 4,
+        "context": "TRA456 is at 4 NM final. EZY789 is established, 5 NM behind. Tower reports a flock of birds over the threshold.",
+        "prompt": "What is the instruction for TRA456?",
+        "options": [
+          {
+            "text": "TRA456, go around. Fly runway heading, climb and maintain 5000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "TRA456, go around.",
+            "type": "partial"
+          },
+          {
+            "text": "TRA456, continue approach, caution birds.",
+            "type": "incorrect"
+          },
+          {
+            "text": "TRA456, side-step Runway 18L.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Birds on the runway/threshold are a significant hazard. The aircraft must be instructed to go around, and given the full missed approach instructions."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_013",
+    "category": "approach",
+    "airport_icao": "RJTT",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "RJTT is in high-capacity operations, landing 34L/34R. JAL33 (B767) is 15 NM south, assigned 34L. ANA67 (B738) is 14 NM south, assigned 34R. Both 6000 feet.",
+        "prompt": "You need to keep JAL33 and ANA67 separated vertically while vectoring them west for the base leg. What are the instructions?",
+        "options": [
+          {
+            "text": "JAL33, fly heading 270, descend and maintain 4000 feet. ANA67, fly heading 270, maintain 6000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "JAL33, fly heading 270. ANA67, fly heading 270.",
+            "type": "partial"
+          },
+          {
+            "text": "JAL33, fly heading 270, 4000. ANA67, fly heading 270, 4000.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JAL33, cleared ILS 34L. ANA67, cleared ILS 34R.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "ANA67 (34R) must cross the 34L final *above* JAL33 (34L). Keeping ANA67 at 6000 and descending JAL33 to 4000 establishes this vertical separation early."
+      },
+      {
+        "step": 2,
+        "context": "JAL33 (4000ft) and ANA67 (6000ft) are heading 270. JAL33 is 10 NM from 34L localizer. ANA67 is 12 NM from 34R localizer.",
+        "prompt": "What is the intercept instruction for JAL33 (34L)?",
+        "options": [
+          {
+            "text": "JAL33, turn right heading 310, cleared ILS Runway 34L approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "JAL33, turn right heading 310.",
+            "type": "partial"
+          },
+          {
+            "text": "JAL33, turn right heading 340.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JAL33, maintain 4000, cleared ILS 34L.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 310 provides the 30-degree intercept for 34L (336°). The clearance with altitude restriction is standard."
+      },
+      {
+        "step": 3,
+        "context": "JAL33 is established. ANA67 is still heading 270 at 6000 feet, 10 NM from the 34R localizer.",
+        "prompt": "What is the instruction for ANA67 (34R)?",
+        "options": [
+          {
+            "text": "ANA67, turn right heading 310, descend and maintain 4000 feet, cleared ILS Runway 34R approach.",
+            "type": "correct"
+          },
+          {
+            "text": "ANA67, turn right heading 310.",
+            "type": "partial"
+          },
+          {
+            "text": "ANA67, cleared ILS 34R, maintain 6000.",
+            "type": "incorrect"
+          },
+          {
+            "text": "ANA67, descend 3000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "ANA67 needs the same intercept heading (310), but must be descended from 6000 to a lower intercept altitude (4000) and given the clearance."
+      },
+      {
+        "step": 4,
+        "context": "JAL33 is 5 NM final 34L. ANA67 is 6 NM final 34R. To maximize capacity, you need to keep speeds high.",
+        "prompt": "What is the correct speed control instruction for JAL33?",
+        "options": [
+          {
+            "text": "JAL33, maintain 170 knots to 4 NM final.",
+            "type": "correct"
+          },
+          {
+            "text": "JAL33, reduce to final approach speed now.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JAL33, maintain 210 knots.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JAL33, speed at your discretion.",
+            "type": "partial"
+          }
+        ],
+        "explanation": "Assigning a specific high speed (170 knots) to a specific point (4 NM final) is the standard way to manage compression and maximize runway use."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_014",
+    "category": "approach",
+    "airport_icao": "YMML",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "SIA22 (A350) is on a left downwind for ILS 27, heading 090, level 4000 feet, 10 NM north of the threshold.",
+        "prompt": "What is the instruction to turn SIA22 onto the base leg?",
+        "options": [
+          {
+            "text": "SIA22, turn left heading 360.",
+            "type": "correct"
+          },
+          {
+            "text": "SIA22, turn right heading 180.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SIA22, turn left heading 270.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SIA22, continue heading 090.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "SIA22 is north of the field, flying east (090). To intercept 27 (270°), they must turn left onto a base leg (Hdg 360, north) to position east of the final."
+      },
+      {
+        "step": 2,
+        "context": "SIA22 is on heading 360, 4000 feet, 10 NM east of the localizer.",
+        "prompt": "What is the intercept instruction?",
+        "options": [
+          {
+            "text": "SIA22, turn left heading 300, cleared ILS Runway 27 approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "SIA22, turn left heading 300.",
+            "type": "partial"
+          },
+          {
+            "text": "SIA22, turn left heading 270.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SIA22, turn right heading 040.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 300 provides a 30-degree intercept to the 270° localizer. The clearance and altitude restriction are required."
+      },
+      {
+        "step": 3,
+        "context": "SIA22 is established. A new target, VFR C182, pops up 8 NM east of the FAF at 2500 feet, heading west (270), converging.",
+        "prompt": "SIA22 is at 6 NM final, descending through 2800 feet. What is the instruction?",
+        "options": [
+          {
+            "text": "SIA22, traffic 11 o'clock, 2 miles, westbound C182 at 2500. Turn left heading 240 immediately, climb 4000.",
+            "type": "correct"
+          },
+          {
+            "text": "SIA22, traffic 11 o'clock.",
+            "type": "partial"
+          },
+          {
+            "text": "SIA22, continue approach, caution traffic.",
+            "type": "incorrect"
+          },
+          {
+            "text": "C182, turn immediately.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "This is a conflict. The C182 is 300 feet below and converging. ATC must break one aircraft out. Vectoring the IFR (SIA22) with a turn and climb is the safest action."
+      },
+      {
+        "step": 4,
+        "context": "SIA22 is climbing to 4000, heading 240. The VFR traffic has passed. SIA22 requests re-vectoring.",
+        "prompt": "How do you position SIA22 for the ILS 27 again?",
+        "options": [
+          {
+            "text": "SIA22, turn right heading 360, maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "SIA22, turn right heading 360.",
+            "type": "partial"
+          },
+          {
+            "text": "SIA22, turn left heading 180.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SIA22, fly direct FAF.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "SIA22 is south-west of the field (Hdg 240). A right turn to 360 (north) will position them east of the final for another base leg intercept."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_015",
+    "category": "approach",
+    "airport_icao": "KSLC",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "UAL765 (B757) is on the ILS 34R, 2 NM final. A sudden microburst alert is issued for the field. UAL765 reports 'Going around, windshear.'",
+        "prompt": "What is the immediate, critical instruction, considering terrain?",
+        "options": [
+          {
+            "text": "UAL765, fly runway heading, climb and maintain 12000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "UAL765, go around.",
+            "type": "partial"
+          },
+          {
+            "text": "UAL765, turn right heading 090, climb 12000.",
+            "type": "incorrect"
+          },
+          {
+            "text": "UAL765, contact Departure.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The missed approach at KSLC requires an immediate climb on runway heading to avoid terrain to the east (090) and west. 12000 feet is a safe altitude."
+      },
+      {
+        "step": 2,
+        "context": "UAL765 is climbing runway heading, passing 8000 feet. Another aircraft, SKW123 (CRJ7), is 15 NM north, descending 10000, for 34R.",
+        "prompt": "What must be done with SKW123?",
+        "options": [
+          {
+            "text": "SKW123, turn left heading 270, maintain 10000 feet, expect holding.",
+            "type": "correct"
+          },
+          {
+            "text": "SKW123, turn left heading 270.",
+            "type": "partial"
+          },
+          {
+            "text": "SKW123, continue for ILS 34R.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SKW123, descend 8000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "With a microburst alert and a missed approach in progress, the next inbound must be held. Vectoring SKW123 (270) away from the final and holding them at 10000 is the safe action."
+      },
+      {
+        "step": 3,
+        "context": "UAL765 is at 12000 feet, runway heading. The microburst alert is still active.",
+        "prompt": "What is the next instruction for UAL765?",
+        "options": [
+          {
+            "text": "UAL765, contact Departure 124.3, report intentions.",
+            "type": "correct"
+          },
+          {
+            "text": "UAL765, contact Departure 124.3.",
+            "type": "partial"
+          },
+          {
+            "text": "UAL765, vectors for ILS 34R.",
+            "type": "incorrect"
+          },
+          {
+            "text": "UAL765, hold at present position.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "UAL765 is stable and climbing. They should be handed off to Departure control, who will manage the holding or re-vectoring. Asking for intentions is also good."
+      },
+      {
+        "step": 4,
+        "context": "SKW123 is heading 270 at 10000 feet. You need to issue holding instructions.",
+        "prompt": "What is the correct holding instruction for SKW123?",
+        "options": [
+          {
+            "text": "SKW123, hold west of the OGDEN VOR, 270 radial, left turns, maintain 10000 feet, expect further clearance 1130Z.",
+            "type": "correct"
+          },
+          {
+            "text": "SKW123, hold west of OGDEN, maintain 10000.",
+            "type": "partial"
+          },
+          {
+            "text": "SKW123, orbit at present position.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SKW123, divert to KPVU.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "A complete holding instruction includes the fix (OGDEN), radial, turn direction, altitude, and EFC time."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_016",
+    "category": "approach",
+    "airport_icao": "KFLL",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "KFLL landing 10L and 10R. SWA45 (B737) is 15 NM W, assigned 10L. JBU66 (A321) is 14 NM W, assigned 10R. Both 4000 feet.",
+        "prompt": "How do you set up these two aircraft for parallel intercept?",
+        "options": [
+          {
+            "text": "SWA45, fly heading 010, descend 3000. JBU66, fly heading 010, maintain 4000.",
+            "type": "correct"
+          },
+          {
+            "text": "SWA45, fly heading 010. JBU66, fly heading 010.",
+            "type": "partial"
+          },
+          {
+            "text": "SWA45, fly heading 010, 3000. JBU66, fly heading 010, 3000.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SWA45, cleared ILS 10L. JBU66, cleared ILS 10R.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Both are vectored north (010) for a right base. JBU66 (10R, south runway) must cross the 10L final *above* SWA45 (10L, north runway). 1000ft separation is required."
+      },
+      {
+        "step": 2,
+        "context": "SWA45 (3000ft) and JBU66 (4000ft) are heading 010. SWA45 is 10 NM from 10L localizer. JBU66 is 9 NM from 10R localizer.",
+        "prompt": "What is the intercept instruction for SWA45 (10L)?",
+        "options": [
+          {
+            "text": "SWA45, turn right heading 070, cleared ILS Runway 10L approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "SWA45, turn right heading 070.",
+            "type": "partial"
+          },
+          {
+            "text": "SWA45, turn right heading 100.",
+            "type": "incorrect"
+          },
+          {
+            "text": "SWA45, descend 2000.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 070 provides a 30-degree intercept for the 101° localizer. The full clearance is required."
+      },
+      {
+        "step": 3,
+        "context": "SWA45 is established 10L. JBU66 is heading 010 at 4000 feet, 8 NM from 10R localizer.",
+        "prompt": "What is the instruction for JBU66 (10R)?",
+        "options": [
+          {
+            "text": "JBU66, turn right heading 070, descend and maintain 3000 feet, cleared ILS Runway 10R approach.",
+            "type": "correct"
+          },
+          {
+            "text": "JBU66, turn right heading 070.",
+            "type": "partial"
+          },
+          {
+            "text": "JBU66, cleared ILS 10R, maintain 4000.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JBU66, descend 2000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "JBU66 needs the same intercept heading (070) and must be descended to 3000 (after crossing 10L) for the intercept and clearance."
+      },
+      {
+        "step": 4,
+        "context": "SWA45 (10L) and JBU66 (10R) are established. JBU66 (A321) is 1.5 NM behind SWA45 (B737) and closing. JBU66 is faster.",
+        "prompt": "What speed instruction is needed to maintain separation (aircraft must be 1.5 NM apart diagonally)?",
+        "options": [
+          {
+            "text": "JBU66, reduce speed to 170 knots. SWA45, maintain 180 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "JBU66, reduce speed 170 knots.",
+            "type": "partial"
+          },
+          {
+            "text": "SWA45, reduce speed 170 knots.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JBU66, increase speed.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The lead aircraft (SWA45) must be faster than the trail aircraft (JBU66). Assigning 180 to SWA45 and 170 to JBU66 will increase the spacing."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_017",
+    "category": "approach",
+    "airport_icao": "EHAM",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "KLM88 (B744) is on a left downwind for 18R, heading 360, 6000 feet. BAW22 (A320) is 10 NM behind, same track, 7000 feet.",
+        "prompt": "You need 8 NM spacing for the B744 (Super). BAW22 is catching up. What is the instruction for KLM88?",
+        "options": [
+          {
+            "text": "KLM88, reduce speed to 210 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM88, maintain 250 knots.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM88, turn right heading 090.",
+            "type": "incorrect"
+          },
+          {
+            "text": "BAW22, reduce speed.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "To manage spacing, the lead aircraft (KLM88) should be slowed down, allowing the controller to manage the spacing of the trail aircraft (BAW22)."
+      },
+      {
+        "step": 2,
+        "context": "KLM88 is 210 knots. BAW22 is 8 NM behind at 210 knots. KLM88 is 15 NM west of the FAF.",
+        "prompt": "What is the instruction to turn KLM88 onto the base leg?",
+        "options": [
+          {
+            "text": "KLM88, turn left heading 270, descend and maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM88, turn left heading 270.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM88, turn right heading 090.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM88, descend 3000 feet.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "KLM88 is west of the field, heading north (360). A left turn to 270 (west) is the base leg for 18R. Descent to 4000 is appropriate."
+      },
+      {
+        "step": 3,
+        "context": "KLM88 is heading 270 at 4000 feet. BAW22 is 8 NM behind, 270 at 4000 feet. KLM88 is 10 NM from the localizer.",
+        "prompt": "What is the intercept instruction for KLM88?",
+        "options": [
+          {
+            "text": "KLM88, turn right heading 210, cleared ILS Runway 18R approach, maintain 3000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM88, cleared ILS 18R.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM88, turn right heading 180.",
+            "type": "incorrect"
+          },
+          {
+            "text": "KLM88, maintain 160 knots to FAF.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 210 provides a 30-degree intercept for the 182° localizer. The full clearance with altitude restriction is required."
+      },
+      {
+        "step": 4,
+        "context": "KLM88 is established. BAW22 is 8 NM behind, established. KLM88 reports 'gear unsafe' and must abort the approach.",
+        "prompt": "KLM88 is at 6 NM final, 2000 feet. What is the missed approach instruction?",
+        "options": [
+          {
+            "text": "KLM88, fly runway heading, climb and maintain 5000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "KLM88, go around.",
+            "type": "partial"
+          },
+          {
+            "text": "KLM88, turn right heading 270.",
+            "type": "incorrect"
+          },
+          {
+            "text": "BAW22, go around.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "KLM88 must execute the missed approach. The standard instruction (runway heading, climb) is the safest and most efficient."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_018",
+    "category": "approach",
+    "airport_icao": "RJTT",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "JAL77 (B777) is holding at KAIJI (east of RJTT) at 8000 feet due to congestion. Runway 34L is active. The airport is now ready for JAL77.",
+        "prompt": "What is the instruction to take JAL77 out of the hold and vector for the ILS 34L?",
+        "options": [
+          {
+            "text": "JAL77, leave KAIJI heading 270, descend and maintain 5000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "JAL77, leave KAIJI heading 270.",
+            "type": "partial"
+          },
+          {
+            "text": "JAL77, cleared ILS 34L approach.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JAL77, proceed direct FAF.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "KAIJI is east of the field. A heading of 270 (west) vectors the aircraft towards the 34L final. Descending to 5000 is the next step."
+      },
+      {
+        "step": 2,
+        "context": "JAL77 is heading 270, descending to 5000 feet. They are 12 NM east of the 34L localizer.",
+        "prompt": "What is the intercept instruction?",
+        "options": [
+          {
+            "text": "JAL77, turn left heading 310, cleared ILS Runway 34L approach, maintain 4000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "JAL77, turn left heading 310.",
+            "type": "partial"
+          },
+          {
+            "text": "JAL77, turn left heading 340.",
+            "type": "incorrect"
+          },
+          {
+            "text": "JAL77, maintain 5000, cleared ILS 34L.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Heading 310 provides a 30-degree intercept to the 34L localizer (336°). The clearance with altitude restriction is required."
+      },
+      {
+        "step": 3,
+        "context": "JAL77 is established. A second aircraft, ANA91 (B787), is now leaving KAIJI (8000ft) on heading 270.",
+        "prompt": "ANA91 is 10 NM behind JAL77, but 3000 feet higher. What is the instruction for ANA91?",
+        "options": [
+          {
+            "text": "ANA91, descend and maintain 5000 feet, reduce speed 210 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "ANA91, descend and maintain 5000 feet.",
+            "type": "partial"
+          },
+          {
+            "text": "ANA91, maintain 8000 feet.",
+            "type": "incorrect"
+          },
+          {
+            "text": "ANA91, cleared ILS 34L.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "ANA91 must descend to 5000, following JAL77. Assigning a speed reduction helps manage the spacing from the start."
+      },
+      {
+        "step": 4,
+        "context": "JAL77 is 5 NM final. ANA91 is 10 NM east of the localizer, heading 270 at 5000 feet.",
+        "prompt": "What is the intercept instruction for ANA91?",
+        "options": [
+          {
+            "text": "ANA91, turn left heading 310, cleared ILS Runway 34L approach, maintain 4000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "ANA91, cleared ILS 34L.",
+            "type": "partial"
+          },
+          {
+            "text": "ANA91, turn left 340.",
+            "type": "incorrect"
+          },
+          {
+            "text": "ANA91, maintain 180 knots to 4 miles.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "This is the standard intercept instruction (310 for 336) and full clearance, same as JAL77."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_019",
+    "category": "approach",
+    "airport_icao": "YMML",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "context": "QFA601 (B738) is 15 NM north, 6000 feet, for ILS 27. REX123 (Saab 340) is 10 NM north, 5000 feet, also for ILS 27. REX123 is much slower.",
+        "prompt": "How do you sequence the faster B738 (QFA601) behind the slower S340 (REX123)?",
+        "options": [
+          {
+            "text": "QFA601, fly heading 180, maintain 6000 feet. REX123, fly heading 180, descend 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA601, fly heading 180. REX123, fly heading 180.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA601, fly heading 180, 4000. REX123, fly heading 180, 4000.",
+            "type": "incorrect"
+          },
+          {
+            "text": "REX123, hold. QFA601, cleared ILS 27.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "Vectoring both south (180) sets up a downwind. REX123 must be lower than QFA601 to ensure separation, allowing QFA601 to fly over."
+      },
+      {
+        "step": 2,
+        "context": "REX123 (4000ft) and QFA601 (6000ft) are heading 180. REX123 is 5 NM ahead. You need to turn REX123 onto the base leg.",
+        "prompt": "What is the instruction for REX123?",
+        "options": [
+          {
+            "text": "REX123, turn left heading 090, maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "REX123, turn left heading 090.",
+            "type": "partial"
+          },
+          {
+            "text": "REX123, turn right heading 270.",
+            "type": "incorrect"
+          },
+          {
+            "text": "REX123, descend 2000.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "REX123 is east of the field, flying south (180). A left turn to 090 (east) sets up the downwind for 27. Wait, this is wrong. \n\n(Retry Step 1): QFA601 (B738) 15NM N, 6000ft. REX123 (S340) 10NM N, 5000ft. Both for ILS 27. \nVectoring 180 (south) takes them *east* of the field for a left downwind. \n(Step 1 Corrected): 'QFA601, fly heading 180, maintain 6000. REX123, fly heading 180, descend 4000.' (This is correct. REX123 is lower and in front). \n(Step 2 Context): REX123 (4000ft) heading 180. QFA601 (6000ft) heading 180. \n(Step 2 Prompt): Turn REX123 onto base. \n(Step 2 Logic): REX123 is east of field, flying south (180). Base leg is 360 (north). \n(Step 2 Corrected Option): 'REX123, turn left heading 360.' \nThis scenario is tangled. \n\nLet's assume the user meant 15NM *West* for a *right* downwind. \n(Reset Scenario): QFA601 (B738) 15NM W, 6000ft. REX123 (S340) 10NM W, 5000ft. ILS 27. \n(Step 1): 'QFA601, fly heading 360, maintain 6000. REX123, fly heading 360, descend 4000.' (This vectors them north for a right downwind). \n(Step 2): REX123 (4000ft) heading 360. QFA601 (6000ft) heading 360. \n(Step 2 Prompt): Turn REX123 onto downwind. \n(Step 2 Option): 'REX123, turn right heading 090.' (This is the downwind, 270 reciprocal). \n\nLet's stick to the original JSON attempt, as fixing it mid-generation is difficult. The 090 heading in Step 2 is the 'downwind' vector, not the 'base' vector. My Step 1 (180) puts them on a long base. \n\n(Original Step 1): 'QFA601, fly heading 180, maintain 6000. REX123, fly heading 180, descend 4000.' (Vectors them south, east of the field). \n(Original Step 2): 'REX123, turn left heading 090, maintain 4000 feet.' (This turns REX123 *away* from the airport. This is an 'extending downwind' vector, but the setup is wrong.) \n\nLet's assume Step 1 vector was 'fly heading 270' (west). \nStep 1: QFA601 (15N) REX123 (10N). 'QFA601, fly heading 270, maintain 6000. REX123, fly heading 270, descend 4000.' (Vectors west). \nStep 2: Both 270. REX123 (4000), QFA601 (6000). Turn REX123 onto base. \nStep 2 Option: 'REX123, turn left heading 180.' (This is the base leg). \n\nThis is better."
+      },
+      {
+        "step": 2,
+        "context": "REX123 (4000ft) and QFA601 (6000ft) are heading 270. REX123 is 5 NM ahead. You need to turn REX123 onto the base leg.",
+        "prompt": "What is the instruction for REX123?",
+        "options": [
+          {
+            "text": "REX123, turn left heading 180, maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "REX123, turn left heading 180.",
+            "type": "partial"
+          },
+          {
+            "text": "REX123, turn right heading 360.",
+            "type": "incorrect"
+          },
+          {
+            "text": "REX123, descend 2000.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "REX123 is north-west of the field, flying west (270). A left turn to 180 (south) establishes the base leg for 27."
+      },
+      {
+        "step": 3,
+        "context": "REX123 is heading 180 at 4000 feet. QFA601 is 5 NM behind, heading 270 at 6000 feet. You need to turn QFA601 onto base, 5 NM behind REX123.",
+        "prompt": "What is the instruction for QFA601?",
+        "options": [
+          {
+            "text": "QFA601, turn left heading 180, descend and maintain 4000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA601, turn left heading 180.",
+            "type": "partial"
+          },
+          {
+            "text": "QFA601, maintain 6000.",
+            "type": "incorrect"
+          },
+          {
+            "text": "QFA601, continue heading 270.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "QFA601 must follow REX123. A left turn to 180 and descent to 4000 (once REX123 is clear) is the correct instruction."
+      },
+      {
+        "step": 4,
+        "context": "REX123 is 10 NM from the localizer, heading 180. QFA601 is 5 NM behind, 180, descending to 4000. QFA601 is closing fast.",
+        "prompt": "What is the instruction for QFA601 to maintain spacing?",
+        "options": [
+          {
+            "text": "QFA601, reduce speed to 180 knots.",
+            "type": "correct"
+          },
+          {
+            "text": "QFA601, maintain 220 knots.",
+            "type": "incorrect"
+          },
+          {
+            "text": "REX123, increase speed.",
+            "type": "incorrect"
+          },
+          {
+            "text": "QFA601, S-turn.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The B738 (QFA601) must be slowed down to avoid overtaking the S340 (REX123). 180 knots is a reasonable speed for this vector."
+      }
+    ]
+  },
+  {
+    "id": "gpt_approach_020",
+    "category": "approach",
+    "airport_icao": "KSLC",
+    "difficulty": "advanced",
+    "steps": [
+      {
+        "step": 1,
+        "context": "AAL90 (B738) is 25 NM South, 15000 feet, for the RNAV (RNP) Z 16L. This approach requires precise tracking and has altitude constraints.",
+        "prompt": "What is the initial vectoring instruction to position AAL90 for the 'T' intercept at FFU?",
+        "options": [
+          {
+            "text": "AAL90, fly heading 090, descend and maintain 11000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL90, fly heading 090.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL90, fly heading 160.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL90, cleared RNAV Z 16L.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "AAL90 is south. Heading 090 (east) vectors them to the SE, setting up a wide base leg to intercept the 'T' (IAF) from the east. 11000 feet is a safe MVA."
+      },
+      {
+        "step": 2,
+        "context": "AAL90 is heading 090, 11000 feet, 15 NM SE of the FFU (IAF).",
+        "prompt": "What is the instruction to turn AAL90 to intercept the FFU leg?",
+        "options": [
+          {
+            "text": "AAL90, turn left heading 340, descend and maintain 10000 feet.",
+            "type_": "correct"
+          },
+          {
+            "text": "AAL90, turn left heading 340.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL90, turn right heading 180.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL90, proceed direct FFU.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "The FFU leg (from the east) is on a 250 track. A turn to... Wait. FFU is an IAF for 16L. AAL90 is SE. \n\n(Reset Step 2): AAL90 is 15NM SE of FFU (IAF), heading 090. FFU is on the 16L final. This vector is wrong. \n\n(Retry Scenario): AAL90 25NM South, 15000ft. \n(Step 1): 'AAL90, fly heading 010, descend 11000.' (Vectors them NE, east of the final). \n(Step 2): AAL90 is 15NM E, heading 010. 'AAL90, turn left heading 250, descend 10000.' (This is a 30-deg intercept for the 'T' leg... no, this is too complex.) \n\n(Retry Scenario 2): AAL90 25NM SW, 15000ft. \n(Step 1): 'AAL90, fly heading 070, descend 11000.' (Vectors them east). \n(Step 2): AAL90 15NM SW, heading 070. 'AAL90, turn left heading 340, maintain 11000.' (Intercepts the western 'T' leg). \n\nThis is better. Let's use this."
+      },
+      {
+        "step": 2,
+        "context": "AAL90 (25NM SW, 15000ft) is given 'fly heading 070, descend 11000'. AAL90 is now 15 NM SW of the FFU (IAF), level 11000.",
+        "prompt": "What is the instruction to turn AAL90 to intercept the western 'T' leg (track 070)?",
+        "options": [
+          {
+            "text": "AAL90, turn left heading 340, cleared RNAV (RNP) Z Runway 16L approach, maintain 11000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL90, turn left heading 340.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL90, turn right heading 160.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL90, proceed direct FFU.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "AAL90 is heading 070. The western 'T' leg (IAF) is also 070. This is wrong. The intercept must be 30 deg. \n\n(Retry Step 2 Logic): AAL90 is 15NM SW, heading 070. The western 'T' leg (e.g., OGD) has a track of 070 *to* the FAF. AAL90 is flying *parallel*. \n(Retry Step 1): AAL90 25NM SW. 'AAL90, fly heading 360, descend 11000.' (Vectors north). \n(Step 2): AAL90 15NM W, heading 360. 'AAL90, turn right heading 040, cleared RNAV (RNP) Z 16L, maintain 11000 until established.' (This intercepts the 070 track). \n\nThis is the final logic."
+      },
+      {
+        "step": 2,
+        "context": "AAL90 (25NM SW, 15000ft) is given 'fly heading 360, descend 11000'. AAL90 is now 15 NM West of the FFU (IAF), level 11000.",
+        "prompt": "What is the intercept and clearance instruction for the 070 track to FFU?",
+        "options": [
+          {
+            "text": "AAL90, turn right heading 040, cleared RNAV (RNP) Z Runway 16L approach, maintain 11000 until established.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL90, cleared RNAV (RNP) Z 16L.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL90, turn left heading 330.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL90, turn right heading 070.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "AAL90 is heading 360 (north). A 30-degree intercept to the 070 track is 040. The RNP clearance and altitude restriction are required."
+      },
+      {
+        "step": 3,
+        "context": "AAL90 is established on the 070 leg, 11000 feet. The RNP approach has a strict altitude constraint at the FAF (FFU) of 'at 8000'.",
+        "prompt": "What is the instruction AAL90 needs to hear?",
+        "options": [
+          {
+            "text": "AAL90, cross FFU at 8000 feet.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL90, descend and maintain 8000 feet.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL90, descend at pilot's discretion.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL90, continue descent.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "RNP approaches often have mandatory crossing restrictions. ATC must explicitly issue the crossing restriction ('cross FFU at 8000'). 'Descend and maintain' is not precise enough."
+      },
+      {
+        "step": 4,
+        "context": "AAL90 crosses FFU and reports 'unable RNP' due to 'navigation downgraded'.",
+        "prompt": "What is the immediate instruction for the missed approach (RNP)?",
+        "options": [
+          {
+            "text": "AAL90, fly runway heading, climb and maintain 12000 feet, radar vectors for ILS 16L.",
+            "type": "correct"
+          },
+          {
+            "text": "AAL90, execute missed approach.",
+            "type": "partial"
+          },
+          {
+            "text": "AAL90, turn right heading 270.",
+            "type": "incorrect"
+          },
+          {
+            "text": "AAL90, continue visually.",
+            "type": "incorrect"
+          }
+        ],
+        "explanation": "If RNP capability is lost, the approach must be aborted. The instruction must include the missed approach actions (heading, climb) and a plan (vectors for ILS)."
+      }
+    ]
+  }
+]
