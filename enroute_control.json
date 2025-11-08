@@ -1,0 +1,752 @@
+[
+  {
+    "id": "gpt_center_001",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "ZLA (Los Angeles Center)",
+    "title": "ZLA: High-Altitude Reroute and Conflict",
+    "description": "Handle a high-altitude reroute due to pop-up weather and resolve crossing traffic.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "UAL123 (FL350) reports moderate turbulence and requests deviation 30 miles right of track. Sector is busy.",
+        "options": [
+          { "id": "A", "text": "Acknowledge request. \"UAL123, deviation 30 miles right of track approved, report when able direct original route.\"", "isCorrect": false, "feedback": "Partial. This approval is too permissive without checking for traffic. A restriction is needed." },
+          { "id": "B", "text": "Approve deviation and issue restriction. \"UAL123, deviation 30 miles right of track approved, maintain FL350. Report when able to resume routing.\"", "isCorrect": true, "feedback": "Correct. This approves the deviation while ensuring altitude compliance, which is critical for the next step." },
+          { "id": "C", "text": "Deny request. \"UAL123, unable deviation, maintain track.\"", "isCorrect": false, "feedback": "Incorrect. Denying a weather deviation without cause is unsafe." },
+          { "id": "D", "text": "Issue turn only. \"UAL123, fly heading 190, vectors for weather.\"", "isCorrect": false, "feedback": "Incorrect. This is less efficient than a pilot-retained deviation and uses non-standard phraseology for this context." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "You observe UAL123's new track will conflict with AAL456 (FL360) in 8 minutes. AAL456 is opposite direction.",
+        "options": [
+          { "id": "A", "text": "Issue descent. \"UAL123, descend and maintain FL330.\"", "isCorrect": true, "feedback": "Correct. This provides immediate vertical separation from the FL360 traffic and is the most efficient resolution." },
+          { "id": "B", "text": "Issue climb. \"UAL123, climb and maintain FL370.\"", "isCorrect": false, "feedback": "Incorrect. This would bust the adjacent sector's altitude stratum without coordination." },
+          { "id": "C", "text": "Issue vector. \"UAL123, turn left heading 150.\"", "isCorrect": false, "feedback": "Incorrect. This turns them back into the weather they are avoiding." },
+          { "id": "D", "text": "Wait to see if the pilot corrects.", "isCorrect": false, "feedback": "Incorrect. Waiting ensures a loss of separation." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "UAL123 is now at FL330. The pilot reports clear of weather and requests to resume original route and altitude.",
+        "options": [
+          { "id": "A", "text": "Approve immediately. \"UAL123, cleared direct original route, climb and maintain FL350.\"", "isCorrect": false, "feedback": "Incorrect. This is unsafe as the conflict with AAL456 may still exist or another conflict could be created." },
+          { "id": "B", "text": "Provide vector. \"UAL123, fly heading 180, join J52.\"", "isCorrect": false, "feedback": "Partial. This is procedurally acceptable but less efficient than 'cleared direct' if the route is clear." },
+          { "id": "C", "text": "Verify traffic. \"UAL123, standby... (checks traffic)... UAL123, when able, proceed direct PEKUE, resume FL350.\"", "isCorrect": false, "feedback": "Partial. This is good practice, but 'resume FL350' is not the correct phraseology. A climb clearance is required." },
+          { "id": "D", "text": "Verify traffic and clear. \"UAL123, when able, proceed direct PEKUE. Climb and maintain FL350.\"", "isCorrect": true, "feedback": "Correct. This verifies the aircraft's capability, provides an efficient clearance, and re-establishes the correct altitude." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "UAL123 is re-established on route at FL350, approaching the boundary with ZOA (Oakland Center).",
+        "options": [
+          { "id": "A", "text": "Initiate data link handoff. \"UAL123, contact Oakland Center 135.5.\"", "isCorrect": true, "feedback": "Correct. Standard procedure for handoff in a data link environment." },
+          { "id": "B", "text": "Wait for pilot to report boundary.", "isCorrect": false, "feedback": "Incorrect. This is passive control and not standard procedure." },
+          { "id": "C", "text": "Tell ZOA to take control. \"ZOA, your control UAL123.\"", "isCorrect": false, "feedback": "Incorrect. This phraseology is for specific, non-standard situations, not routine handoffs." },
+          { "id": "D", "text": "Flash UAL123 on ZOA's scope and wait for them to accept.", "isCorrect": false, "feedback": "Partial. This is part of the internal process, but the instruction to the pilot is the key action." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_002",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "ZOB (Cleveland Center)",
+    "title": "ZOB: Reroute and Sequencing (Lake Effect)",
+    "description": "Manage a high-altitude sector during a significant lake-effect snow event, requiring reroutes around build-ups and sequencing for KDTW.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "Massive weather cell (lake effect) is blocking the YNG1 arrival into KDTW. SWA445 (FL370) is 100 miles from the arrival gate.",
+        "options": [
+          { "id": "A", "text": "Let the pilot deviate as needed. \"SWA445, weather depicted ahead, deviate as required.\"", "isCorrect": false, "feedback": "Incorrect. This is too ambiguous and cedes control in a high-density area." },
+          { "id": "B", "text": "Proactively reroute. \"SWA445, due weather, cleared direct FNT, maintain FL370. Expect YNG1 arrival from FNT.\"", "isCorrect": false, "feedback": "Partial. This is a good reroute, but it doesn't confirm the new arrival; it just sets an expectation." },
+          { "id": "C", "text": "Issue a full reroute clearance. \"SWA445, amend route. Cleared direct FNT, direct ROZZY, YNG1 arrival. Maintain FL370.\"", "isCorrect": true, "feedback": "Correct. This provides a specific, unambiguous, and full reroute clearance to navigate weather and rejoin the arrival." },
+          { "id": "D", "text": "Vector the aircraft. \"SWA445, fly heading 270, vectors around weather.\"", "isCorrect": false, "feedback": "Incorrect. Vectoring at this distance is inefficient and increases controller workload." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "DAL88 (FL350) is 20 miles behind SWA445, same route. You must also reroute them.",
+        "options": [
+          { "id": "A", "text": "Give the same clearance. \"DAL88, amend route. Cleared direct FNT, direct ROZZY, YNG1 arrival. Maintain FL350.\"", "isCorrect": true, "feedback": "Correct. This maintains consistency and ensures both aircraft are on a known, clear track." },
+          { "id": "B", "text": "Descend them. \"DAL88, descend and maintain FL290.\"", "isCorrect": false, "feedback": "Incorrect. This is a premature descent and doesn't solve the weather problem." },
+          { "id": "C", "text": "Tell them to follow SWA445. \"DAL88, follow SWA445, cleared same reroute.\"", "isCorrect": false, "feedback": "Incorrect. Non-standard and imprecise phraseology." },
+          { "id": "D", "text": "Issue a speed restriction. \"DAL88, reduce speed to Mach point seven eight.\"", "isCorrect": false, "feedback": "Partial. This might be needed for spacing, but it doesn't address the primary weather reroute issue." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "SWA445, now on the new route, needs to descend for the arrival. KDTW approach requests they cross ROZZY at FL240.",
+        "options": [
+          { "id": "A", "text": "Issue descent. \"SWA445, descend and maintain FL240.\"", "isCorrect": false, "feedback": "Partial. This is a valid clearance, but a crossing restriction is more precise and expected in this context." },
+          { "id": "B", "text": "Issue pilot's discretion descent. \"SWA445, pilot's discretion, maintain FL240.\"", "isCorrect": false, "feedback": "Incorrect. This gives too much flexibility when sequencing is required." },
+          { "id": "C", "text": "Issue crossing restriction. \"SWA445, cross ROZZY at and maintain FL240.\"", "isCorrect": true, "feedback": "Correct. This is standard ICAO phraseology for a crossing restriction and ensures the aircraft meets the arrival profile." },
+          { "id": "D", "text": "Issue descent for approach. \"SWA445, descend via the YNG1 arrival.\"", "isCorrect": false, "feedback": "Incorrect. This is a "descend via" clearance and is not appropriate until the aircraft is fully established on the published arrival." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "DAL88 is now 15 miles behind SWA445. You need to provide a similar descent clearance while maintaining separation.",
+        "options": [
+          { "id": "A", "text": "Issue same restriction. \"DAL88, cross ROZZY at and maintain FL240.\"", "isCorrect": false, "feedback": "Incorrect. This will compress separation with SWA445, who is also descending to FL240." },
+          { "id": "B", "text": "Issue speed control. \"DAL88, reduce speed 20 knots, descend and maintain FL250.\"", "isCorrect": false, "feedback": "Partial. This is a valid separation tactic, but FL250 might not be coordinated." },
+          { "id": "C", "text": "Issue a stepped descent. \"DAL88, cross 30 miles northeast of ROZZY at and maintain FL260, then cross ROZZY at and maintain FL240.\"", "isCorrect": false, "feedback": "Incorrect. Overly complex and non-standard." },
+          { "id": "D", "text": "Issue a higher crossing restriction. \"DAL88, cross ROZZY at and maintain FL250.\"", "isCorrect": true, "feedback": "Correct. This provides 1000 feet of vertical separation over the fix, ensuring spacing is maintained during the descent phase." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_003",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Shanwick Oceanic",
+    "title": "Shanwick: CPDLC Altitude Request (NAT-OTS)",
+    "description": "Manage an in-trail CPDLC altitude change request within the North Atlantic Organized Track System (OTS).",
+    "steps": [
+      {
+        "id": 1,
+        "description": "BAW213 (FL370) on NAT Track 'Charlie' sends a CPDLC request: 'REQ CLB FL390'. ADS-C data shows same-track traffic, VIR45, is 60 NM ahead at FL370 and AAL109 is 70 NM behind at FL370.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC response: 'CLB FL390'.", "isCorrect": false, "feedback": "Incorrect. This is unsafe. Longitudinal separation has not been established with the aircraft ahead (VIR45)." },
+          { "id": "B", "text": "Send CPDLC response: 'UNABLE FL390 DUE TRAFFIC'.", "isCorrect": false, "feedback": "Partial. This is a safe response, but it's not the only or best option. More information is needed." },
+          { "id": "C", "text": "Send CPDLC response: 'STDBY'. Check longitudinal separation with VIR45.", "isCorrect": true, "feedback": "Correct. This acknowledges the request and allows the controller time to verify Mach Number Technique separation." },
+          { "id": "D", "text": "Send CPDLC response: 'MAINTAIN FL370'.", "isCorrect": false, "feedback": "Incorrect. This is a rejection, not a pending instruction. 'Standby' is the correct procedure." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "You check the flight data. BAW213 is M0.82. VIR45 (ahead) is M0.82. AAL109 (behind) is M0.83. The minimum longitudinal separation is 10 minutes.",
+        "options": [
+          { "id": "A", "text": "BAW213 is gaining on VIR45. Climb is not possible.", "isCorrect": false, "feedback": "Incorrect. They are at the same Mach speed, so separation should be constant." },
+          { "id": "B", "text": "AAL109 is gaining on BAW213. Climb is not possible.", "isCorrect": false, "feedback": "Incorrect. The aircraft behind does not prevent the aircraft in front from climbing." },
+          { "id": "C", "text": "BAW213 and VIR45 are at the same Mach. Separation is constant and standard. The climb to FL390 is clear of all traffic.", "isCorrect": true, "feedback": "Correct. Standard longitudinal separation (10 minutes) is established and maintained as they are same-Mach. The level above (FL390) is clear." },
+          { "id": "D", "text": "AAL109 is faster. You must slow down AAL109 before clearing BAW213 to climb.", "isCorrect": false, "feedback": "Incorrect. This is an unnecessary restriction on AAL109." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Separation is confirmed. You must now issue the clearance to BAW213.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC: 'CLB FL390'.", "isCorrect": false, "feedback": "Partial. This is missing the crossing condition, which is vital in procedural airspace." },
+          { "id": "B", "text": "Send CPDLC: 'CLB TO AND MAINTAIN FL390'.", "isCorrect": false, "feedback": "Partial. Same as A. This is a domestic-style clearance and lacks the required procedural constraints." },
+          { "id": "C", "text": "Send CPDLC: 'AT (current time+5 min) CLB TO AND MAINTAIN FL390'.", "isCorrect": false, "feedback": "Incorrect. A time-based clearance is not required here." },
+          { "id": "D", "text": "Send CPDLC: 'CLIMB TO AND MAINTAIN FL390, REPORT REACHING'.", "isCorrect": true, "feedback": "Correct. This is the standard ICAO clearance. In a procedural environment, the 'REPORT REACHING' element is critical for the controller's situational awareness." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "BAW213 sends a CPDLC message: 'WILCO'. Moments later, you receive an ADS-C message 'LEVEL FL390'.",
+        "options": [
+          { "id": "A", "text": "Send a CPDLC 'ACKNOWLEDGE' to the 'LEVEL FL390' message.", "isCorrect": true, "feedback": "Correct. The controller must acknowledge the level report to close the loop." },
+          { "id": "B", "text": "Update the flight strip and do nothing.", "isCorrect": false, "feedback": "Partial. Updating the strip is correct, but the pilot's report must be acknowledged." },
+          { "id": "C", "text": "Send CPDLC: 'RADAR CONTACT'.", "isCorrect": false, "feedback": "Incorrect. This is oceanic airspace; there is no radar." },
+          { "id":D_": "Call BAW213 on HF to confirm.", "isCorrect": false, "feedback": "Incorrect. This is unnecessary as the CPDLC and ADS-C systems are functioning normally." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_004",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Madrid ACC",
+    "title": "Madrid: Oceanic Entry & Military Airspace",
+    "description": "Manage a westbound aircraft transitioning from European domestic airspace to oceanic, coordinating with Santa Maria (LPPO) via data link, while a military area is active.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "IBE612 (FL360) is approaching the boundary with Santa Maria Oceanic (LPPO). The Oceanic Clearance (OCL) has been received via data link: 'CLRD TO KJFK VIA NAT T, FL360, M080, OCL 1/1 1230'.",
+        "options": [
+          { "id": "A", "text": "No action needed. The OCL is automatic.", "isCorrect": false, "feedback": "Incorrect. The domestic controller must verify the OCL matches the aircraft's current state before transfer." },
+          { "id": "B", "text": "Check that the aircraft's current flight level (FL360) and Mach (M0.80) match the OCL before transfer.", "isCorrect": true, "feedback": "Correct. This is the 'Oceanic Clearance Delivery' check. The domestic controller is the last line of defense to ensure the aircraft enters oceanic airspace as cleared." },
+          { "id": "C", "text": "Instruct the pilot to contact Santa Maria. \"IBE612, contact Santa Maria on 127.9.\"", "isCorrect": false, "feedback": "Partial. This is the handoff instruction, but it must only be given *after* the OCL check is complete." },
+          { "id": "D", "text": "Ask the pilot to read back the full oceanic clearance.", "isCorrect": false, "feedback": "Incorrect. This is not required if the clearance was delivered via data link (CPDLC)." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Just as you verify the OCL, a 'hot' military area (LED10) activates, cutting across IBE612's cleared track to the oceanic entry point (OEP).",
+        "options": [
+          { "id": "A", "text": "Vector IBE612 around the area. \"IBE612, turn right heading 290, vectors to avoid restricted airspace.\"", "isCorrect": true, "feedback": "Correct. This is the most immediate and positive control action to ensure separation from the new hazard." },
+          { "id": "B", "text": "Tell the pilot to deviate. \"IBE612, restricted area LED10 active ahead, deviate as required.\"", "isCorrect": false, "feedback": "Incorrect. This is too permissive and unsafe for a restricted area." },
+          { "id": "C", "text": "Tell Santa Maria to handle it. (Initiate data link coord) 'LPPO, RE-ROUTE IBE612 DUE LED10'.", "isCorrect": false, "feedback": "Incorrect. The aircraft is still in your airspace and your responsibility." },
+          { "id": "D", "text": "Let the aircraft continue. The military will see them.", "isCorrect": false, "feedback": "Incorrect. This is a gross violation of procedure." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "The vector takes IBE612 off the cleared oceanic track. You must coordinate this change with Santa Maria.",
+        "options": [
+          { "id": "A", "text": "Re-clear the aircraft. \"IBE612, cleared direct [new OEP], maintain FL360.\"", "isCorrect": false, "feedback": "Partial. You must coordinate this new entry point with Santa Maria *before* issuing the clearance." },
+          { "id": "B", "text": "Initiate voice coordination with Santa Maria. \"Santa Maria, Madrid. Estimate IBE612 at [new OEP] at 1245, FL360.\"", "isCorrect": true, "feedback": "Correct. A non-standard route change (vector) requires voice or highly specific data link coordination to ensure the oceanic controller accepts the new track and estimate." },
+          { "id": "C", "text": "Handoff the aircraft. \"IBE612, contact Santa Maria 127.9.\"", "isCorrect": false, "feedback": "Incorrect. You cannot handoff an aircraft on a vector and not on a coordinated track." },
+          { "id": "D", "text": "Send a 'Current Profile' data link message to Santa Maria.", "isCorrect": false, "feedback": "Incorrect. This is too passive and does not confirm acceptance of the new track." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "Santa Maria accepts the new estimate. IBE612 is now clear of the military area and 20 miles from the new, coordinated OEP.",
+        "options": [
+          { "id": "A", "text": "Clear the aircraft direct. \"IBE612, resume own navigation, cleared direct [new OEP].\"", "isCorrect": false, "feedback": "Partial. This is good, but the handoff instruction is missing." },
+          { "id": "B", "text": "Give the handoff. \"IBE612, contact Santa Maria on 127.9.\"", "isCorrect": false, "feedback": "Incorrect. The aircraft is still on a vector; they need to be re-established on a route first." },
+          { "id": "C", "text": "Re-establish and handoff. \"IBE612, proceed direct [new OEP], contact Santa Maria 127.9.\"", "isCorrect": true, "feedback": "Correct. This clearance re-establishes the aircraft on the coordinated route and immediately transfers them to the next sector." },
+          { "id": "D", "text": "Ask pilot to report OEP. \"IBE612, report passing [new OEP].\"", "isCorrect": false, "feedback": "Incorrect. This is unnecessary and delays the handoff." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_005",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Singapore ACC",
+    "title": "Singapore: Datalink Reroute & FIR Coordination",
+    "description": "Manage a data link (CPDLC) reroute request for weather, requiring coordination with Kuala Lumpur (WMFC) in a dense traffic environment.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "SIA321 (FL380), on a CPDLC connection, sends 'REQ DEVIATION 20NM RIGHT OF TRACK DUE WX'. This deviation will penetrate Kuala Lumpur (WMFC) airspace.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC: 'UNABLE DEVIATION DUE TRAFFIC'.", "isCorrect": false, "feedback": "Incorrect. This is a premature denial without checking for solutions." },
+          { "id": "B", "text": "Send CPDLC: 'STDBY'. Initiate data link coordination with WMFC.", "isCorrect": true, "feedback": "Correct. The request must be acknowledged (STDBY) and coordination with the adjacent FIR is mandatory before approval." },
+          { "id": "C", "text": "Send CPDLC: 'DEVIATION 20NM RIGHT OF TRACK APPROVED'.", "isCorrect": false, "feedback": "Incorrect. This violates the airspace of WMFC without coordination." },
+          { "id": "D", "text": "Tell the pilot to call on voice. Send CPDLC: 'CONTACT SINGAPORE 132.8'.", "isCorrect": false, "feedback": "Incorrect. The goal of data link is to *reduce* voice calls. You should be able to handle this via data link." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "You send an 'Advance Coordination' (ADC) data link message to WMFC, proposing the deviation. WMFC replies 'ACCEPT'.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC to SIA321: 'DEVIATION 20NM RIGHT OF TRACK APPROVED'.", "isCorrect": false, "feedback": "Partial. This is the correct approval, but it lacks the critical 'when able' instruction for rejoining the route." },
+          { "id": "B", "text": "Send CPDLC to SIA321: 'DEVIATION 20NM RIGHT OF TRACK APPROVED. REPORT WHEN ABLE TO RESUME ROUTING.'", "isCorrect": true, "feedback": "Correct. This is the full, unambiguous clearance, giving the pilot discretion for the deviation and placing the onus on them to report back." },
+          { "id": "C", "text": "Send CPDLC to SIA321: 'CLEARED DIRECT [NEXT WPT]'.", "isCorrect": false, "feedback": "Incorrect. This doesn't match the pilot's request for a deviation." },
+          { "id": "D", "text": "Call SIA321 on voice to give the clearance.", "isCorrect": false, "feedback": "Incorrect. The entire exchange was initiated via data link; it should be completed via data link." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "While SIA321 is deviating, you spot a potential conflict with MAS65 (FL370) inside WMFC airspace. You are not controlling MAS65.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC to SIA321: 'IMMEDIATELY DESCEND FL360'.", "isCorrect": false, "feedback": "Incorrect. You cannot control an aircraft in another FIR's airspace (WMFC) without explicit delegation." },
+          { "id": "B", "text": "Send CPDLC to SIA321: 'TRAFFIC INFORMATION: MAS65, OPPOSITE DIRECTION, 15 MILES, FL370'.", "isCorrect": true, "feedback": "Correct. You can and should provide traffic information, even across a boundary, to enhance the pilot's situational awareness." },
+          { "id": "C", "text": "Send data link message to WMFC: 'REQUEST CONTROL MAS65 FOR SEPARATION'.", "isCorrect": false, "feedback": "Incorrect. This is overly complex and unnecessary. WMFC is responsible for separating their own traffic." },
+          { "id": "D", "text": "Do nothing. It is WMFC's responsibility.", "isCorrect": false, "feedback": "Partial. While technically WMFC's responsibility, providing a traffic advisory is good airmanship and enhances safety." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "SIA321 sends a CPDLC message: 'RESUMING OWN NAVIGATION DIRECT VPL'. The aircraft is now back on the original route.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC: 'ROGER'.", "isCorrect": false, "feedback": "Partial. 'ROGER' is not standard CPDLC. 'ACKNOWLEDGE' is, but a more formal clearance is better." },
+          { "id": "B", "text": "Send CPDLC: 'PROCEED DIRECT VPL'.", "isCorrect": true, "feedback": "Correct. This formally re-establishes the aircraft on its cleared route." },
+          { "id": "C", "text": "Send CPDLC: 'WILCO'.", "isCorrect": false, "feedback": "Incorrect. WILCO (Will Comply) is a pilot response, not a controller instruction." },
+          { "id": "D", "text": "Do nothing. The report is sufficient.", "isCorrect": false, "feedback": "Incorrect. The controller must acknowledge the pilot's action and confirm the route." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_006",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "ZLA (Los Angeles Center)",
+    "title": "ZLA: Descent and Speed Control",
+    "description": "Manage a pair of aircraft descending into the LAX arrival gate, requiring altitude and speed restrictions to maintain separation.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "AAL23 (FL390) and UAL88 (FL370) are on the same track (J50) inbound to LAX. AAL23 is 15 NM ahead of UAL88. Both are requesting descent via the ANJEL arrival.",
+        "options": [
+          { "id": "A", "text": "Clear both. \"AAL23, descend via the ANJEL THREE arrival.\" \"UAL88, descend via the ANJEL THREE arrival.\"", "isCorrect": false, "feedback": "Incorrect. This will cause a compression and loss of separation, as AAL23 will descend through UAL88's level." },
+          { "id": "B", "text": "Clear AAL23, hold UAL88. \"AAL23, descend via the ANJEL THREE arrival.\" \"UAL88, maintain FL370.\"", "isCorrect": false, "feedback": "Partial. This is safe, but inefficient. UAL88 will be too high." },
+          { "id": "C", "text": "Clear AAL23, descend UAL88 with restriction. \"AAL23, descend via the ANJEL THREE arrival.\" \"UAL88, descend and maintain FL250.\"", "isCorrect": false, "feedback": "Partial. This is safer, but still not the most efficient method for maintaining in-trail spacing." },
+          { "id": "D", "text": "Clear AAL23, descend UAL88 with speed. \"AAL23, descend via the ANJEL THREE arrival.\" \"UAL88, maintain Mach point eight two or greater, descend and maintain FL250.\"", "isCorrect": true, "feedback": "Correct. This descends UAL88 to a level clear of the arrival, while the speed instruction prevents UAL88 from catching AAL23 during descent." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "AAL23 (descending through FL290) reports 'Unable speed restrictions on arrival due to turbulence.' They are slowing down.",
+        "options": [
+          { "id": "A", "text": "Acknowledge. \"AAL23, roger.\"", "isCorrect": false, "feedback": "Incorrect. This is a passive response to a report that will affect separation." },
+          { "id": "B", "text": "Issue speed to UAL88. \"UAL88, reduce speed to 280 knots.\"", "isCorrect": true, "feedback": "Correct. AAL23 is slowing, so you must immediately slow the aircraft behind (UAL88) to maintain longitudinal separation." },
+          { "id": "C", "text": "Tell AAL23 to maintain speed. \"AAL23, unable, maintain 310 knots.\"", "isCorrect": false, "feedback": "Incorrect. Denying a pilot's request due to turbulence is unsafe." },
+          { "id": "D", "text": "Vector UAL88. \"UAL88, turn left heading 240.\"", "isCorrect": false, "feedback": "Incorrect. Vectoring is a premature and inefficient solution." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Your speed restriction on UAL88 is working. AAL23 is passing FL210. UAL88 is now at FL250, 12 NM behind AAL23.",
+        "options": [
+          { "id": "A", "text": "Descend UAL88. \"UAL88, descend via the ANJEL THREE arrival.\"", "isCorrect": true, "feedback": "Correct. The lead aircraft (AAL23) is well below UAL88's level, and separation is stable. UAL88 can now be given the arrival." },
+          { "id": "B", "text": "Keep UAL88 high. \"UAL88, maintain FL250.\"", "isCorrect": false, "feedback": "Incorrect. This is inefficient and will deliver the aircraft to approach control too high." },
+          { "id": "C", "text": "Issue a further speed reduction. \"UAL88, reduce speed to 250 knots.\"", "isCorrect": false, "feedback": "Incorrect. This is unnecessary as separation is already stable." },
+          { "id": "D", "text": "Vector UAL88 for spacing. \"UAL88, fly heading 270 for spacing.\"", "isCorrect": false, "feedback": "Incorrect. The in-trail spacing is acceptable; a vector is not needed." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "Both aircraft are descending on the arrival and approaching the handoff boundary with SoCal Approach (SCT).",
+        "options": [
+          { "id": "A", "text": "Handoff AAL23 first. \"AAL23, contact SoCal Approach 134.2.\"", "isCorrect": true, "feedback": "Correct. Handoff the lead aircraft first, then the trailing aircraft, maintaining the sequence." },
+          { "id": "B", "text": "Handoff UAL88 first. \"UAL88, contact SoCal Approach 134.2.\"", "isCorrect": false, "feedback": "Incorrect. This is out of sequence and confusing." },
+          { "id": "C", "text": "Handoff both at once. \"AAL23 and UAL88, contact SoCal Approach 134.2.\"", "isCorrect": false, "feedback": "Incorrect. This can lead to simultaneous radio calls (garbling) and is poor procedure." },
+          { "id": "D", "text": "Wait for both to be at FL190.", "isCorrect": false, "feedback": "Incorrect. The handoff should occur at the designated boundary or altitude, not an arbitrary one." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_007",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "ZOB (Cleveland Center)",
+    "title": "ZOB: Crossing Traffic & Altitude Amendment",
+    "description": "Resolve a crossing traffic conflict between an international arrival and a domestic overflight.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "LUF438 (FL350) is inbound from Europe, level at FL350. AAL112 (FL340) is climbing to FL360 on a crossing track. Conflict in 6 minutes.",
+        "options": [
+          { "id": "A", "text": "Let AAL112 continue climbing. \"AAL112, climb and maintain FL360.\"", "isCorrect": false, "feedback": "Incorrect. This will cause AAL112 to climb directly through LUF438's altitude." },
+          { "id": "B", "text": "Stop AAL112's climb. \"AAL112, maintain FL340.\"", "isCorrect": false, "feedback": "Partial. This is safe, but 'STOP CLIMB' is non-standard. 'MAINTAIN' is correct, but it may be too late." },
+          { "id": "C", "text": "Stop AAL112's climb with a reason. \"AAL112, stop climb FL340, traffic LUF438, 11 o'clock, 20 miles, FL350.\"", "isCorrect": true, "feedback": "Correct. This uses standard phraseology ('stop climb' is non-standard, but 'maintain FL340' would also work if they hadn't passed it). Issuing 'MAINTAIN FL340' immediately is the best action." },
+          { "id": "D", "text": "Descend LUF438. \"LUF438, descend and maintain FL330.\"", "isCorrect": false, "feedback": "Incorrect. It is poor practice to move an international heavy aircraft at cruise altitude when the climbing aircraft is the conflicting factor." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "AAL112 levels at FL340. LUF438 passes overhead. The conflict is resolved. AAL112 requests to resume climb.",
+        "options": [
+          { "id": "A", "text": "Clear AAL112 to climb. \"AAL112, climb and maintain FL360.\"", "isCorrect": true, "feedback": "Correct. The conflict is clear, and the pilot's request can now be safely granted." },
+          { "id": "B", "text": "Clear AAL112 with speed. \"AAL112, resume normal speed, climb and maintain FL360.\"", "isCorrect": false, "feedback": "Incorrect. No speed restriction was issued, so 'resume normal speed' is irrelevant." },
+          { "id": "C", "text": "Verify traffic. \"AAL112, traffic no factor, roger.\"", "isCorrect": false, "feedback": "Incorrect. This is non-standard phraseology and doesn't answer the pilot's request." },
+          { "id": "D", "text": "Wait. \"AAL112, standby.\"", "isCorrect": false, "feedback": "Incorrect. There is no reason to delay the climb." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "LUF438, now past the conflict, requests a descent to FL330 to get out of forecast turbulence.",
+        "options": [
+          { "id": "A", "text": "Deny. \"LUF438, unable, maintain FL350.\"", "isCorrect": false, "feedback": "Incorrect. Denying a turbulence request without checking traffic is poor service." },
+          { "id": "B", "text": "Check traffic below. Sector is clear. \"LUF438, descend and maintain FL330.\"", "isCorrect": true, "feedback": "Correct. The sector is clear, and the descent can be approved." },
+          { "id": "C", "text": "Descend with restriction. \"LUF438, descend pilot's discretion FL330.\"", "isCorrect": false, "feedback": "Partial. This is acceptable, but 'descend and maintain' is more direct and standard." },
+          { "id":D_": "Offer a vector. \"LUF438, fly heading 260, vectors for ride.\"", "isCorrect": false, "feedback": "Incorrect. The pilot requested an altitude change, not a vector." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "LUF438 is level at FL330. AAL112 is level at FL360. Both are approaching the boundary with Toronto Center (CYYZ).",
+        "options": [
+          { "id": "A", "text": "Initiate data link handoff for LUF438. \"LUF438, contact Toronto Center 133.4.\"", "isCorrect": false, "feedback": "Partial. This is the correct action for LUF438, but AAL112 also needs a handoff." },
+          { "id": "B", "text": "Handoff both aircraft in sequence. \"AAL112, contact Toronto Center 133.4.\" ... \"LUF438, contact Toronto Center 133.4.\"", "isCorrect": true, "feedback": "Correct. Handoffs are done sequentially, usually based on proximity to the boundary or altitude (higher first is common)." },
+          { "id": "C", "text": "Handoff AAL112 only. \"AAL112, contact Toronto Center 133.4.\"", "isCorrect": false, "feedback": "Incorrect. Both aircraft must be handed off." },
+          { "id": "D", "text": "Coordinate via data link 'ADC' message for both, then wait for pilot report.", "isCorrect": false, "feedback": "Incorrect. The handoff requires a frequency change instruction to the pilot." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_008",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Shanwick Oceanic",
+    "title": "Shanwick: Oceanic Reroute (CPDLC)",
+    "description": "Handle a mid-ocean reroute request from a pilot via CPDLC due to significant turbulence on the organized track.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "AFR006 (FL380, M0.84) on NAT Track 'Delta' sends a CPDLC request: 'REQ REROUTE 60NM NORTH OF TRACK DUE TURBC'.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC: 'UNABLE'.", "isCorrect": false, "feedback": "Incorrect. This is a premature denial." },
+          { "id": "B", "text": "Send CPDLC: 'STDBY'. Check traffic on parallel Track 'Echo' (60NM north).", "isCorrect": true, "feedback": "Correct. This is the standard procedure. The controller must check for traffic conflicts on the adjacent track." },
+          { "id": "C", "text": "Send CPDLC: 'DEVIATION 60NM NORTH APPROVED'.", "isCorrect": false, "feedback": "Incorrect. This is highly dangerous and could cause a collision if Track Echo is in use." },
+          { "id": "D", "text": "Send CPDLC: 'CLB FL400'.", "isCorrect": false, "feedback": "Incorrect. This does not address the pilot's request (reroute) and offers an unsolicited altitude." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "You check Track 'Echo'. It is active, with traffic at FL380, FL360, and FL340. The requested reroute is impossible at FL380.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC: 'UNABLE REROUTE DUE TRAFFIC. CLB FL400 APPROVED'.", "isCorrect": false, "feedback": "Partial. This is a possible solution, but it's better to offer the pilot the *reason* and the available alternative in one message." },
+          { "id": "B", "text": "Send CPDLC: 'UNABLE FL380 DUE TRACK ECHO. AVAILABLE: 1) MAINTAIN FL380 CURRENT TRACK, 2) REROUTE VIA TRACK ECHO AT FL390'.", "isCorrect": false, "feedback": "Incorrect. FL390 is a westbound level. This is an eastbound track system. Levels are typically FL380, FL360, etc." },
+          { "id": "C", "text": "Send CPDLC: 'UNABLE FL380 DUE PARALLEL TRACK IN USE. AVAILABLE FL400 ON CURRENT TRACK. ADVISE.'", "isCorrect": true, "feedback": "Correct. This clearly explains *why* the request is denied (UNABLE FL380 DUE...) and offers the best available alternative (FL400) to mitigate the turbulence." },
+          { "id": "D", "text": "Send CPDLC: 'UNABLE REROUTE. MAINTAIN FL380.'", "isCorrect": false, "feedback": "Partial. This is a safe but unhelpful denial. A good controller offers alternatives." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "The pilot responds via CPDLC: 'REQ CLB FL400'.",
+        "options": [
+          { "id": "A", "text": "Send CPDLC: 'CLIMB TO AND MAINTAIN FL400, REPORT REACHING'.", "isCorrect": true, "feedback": "Correct. This is the standard ICAO clearance for an oceanic climb." },
+          { "id": "B", "text": "Send CPDLC: 'CLB FL400'.", "isCorrect": false, "feedback": "Partial. This is too brief and lacks the required 'REPORT REACHING' for procedural control." },
+          { "id": "C", "text": "Send CPDLC: 'WILCO'.", "isCorrect": false, "feedback": "Incorrect. WILCO is a pilot response." },
+          { "id": "D", "text": "Send CPDLC: 'RADAR CONTACT FL400'.", "isCorrect": false, "feedback": "Incorrect. This is not radar airspace." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "An ADS-C message 'LEVEL FL400' is received. The aircraft is approaching the boundary with Gander Oceanic.",
+        "options": [
+          { "id": "A", "text": "No action needed. Gander will see the ADS-C report.", "isCorrect": false, "feedback": "Incorrect. The handoff is not automatic." },
+          { "id": "B", "text": "Acknowledge the level report. Update the strip. Initiate data link handoff to Gander.", "isCorrect": true, "feedback": "Correct. This completes the altitude change loop (acknowledge) and performs the next required action (handoff)." },
+          { "id": "C", "text": "Call Gander on the tie-line to advise of the altitude change.", "isCorrect": false, "feedback": "Incorrect. This is what data link (ADS-C/CPDLC) is designed to replace. It's unnecessary." },
+          { "id": "D", "text": "Send CPDLC: 'CONTACT GANDER 131.5'.", "isCorrect": false, "feedback": "Incorrect. Oceanic handoffs are typically via data link or HF, not VHF, unless at the very edge of coverage." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_009",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Madrid ACC",
+    "title": "Madrid: North/South Crossing Conflict",
+    "description": "Resolve a high-altitude conflict between a north-south (Europe-Africa) flight and a west-bound (Europe-US) flight.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "BAW115 (FL370) is westbound, heading for oceanic airspace. RYR789 (FL380) is southbound, heading for GCCC (Canaries). They will cross in 10 minutes. RYR789's track is 40 degrees offset from BAW115.",
+        "options": [
+          { "id": "A", "text": "No conflict. They are at different altitudes.", "isCorrect": false, "feedback": "Incorrect. 1000 feet is legal separation, but it's not the only factor. The situation must be monitored." },
+          { "id": "B", "text": "Potential conflict. Monitor closely.", "isCorrect": true, "feedback": "Correct. While legally separated, busy crossing points are high-risk. No action is needed *yet*, but it must be monitored." },
+          { "id": "C", "text": "Descend BAW115. \"BAW115, descend and maintain FL350.\"", "isCorrect": false, "feedback": "Incorrect. This is a premature action for a legally separated situation." },
+          { "id": "D", "text": "Turn RYR789. \"RYR789, turn right heading 200.\"", "isCorrect": false, "feedback": "Incorrect. Unnecessary vectoring." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "RYR789 suddenly requests a descent: \"Madrid, RYR789, request FL360 due to turbulence.\"",
+        "options": [
+          { "id": "A", "text": "Approve. \"RYR789, descend and maintain FL360.\"", "isCorrect": false, "feedback": "Incorrect. This creates an immediate conflict with BAW115 at FL370." },
+          { "id": "B", "text": "Deny and inform. \"RYR789, UNABLE FL360 due traffic, BAW115, 2 o'clock, 15 miles, FL370.\"", "isCorrect": true, "feedback": "Correct. This is the only safe response. It denies the request and provides the traffic information as to why." },
+          { "id": "C", "text": "Descend BAW115 first. \"BAW115, descend and maintain FL350.\" Then, \"RYR789, descend and maintain FL360.\"", "isCorrect": false, "feedback": "Incorrect. This is too slow and complex. It also moves the non-requesting aircraft." },
+          { "id": "D", "text": "Offer FL370. \"RYR789, UNABLE FL360, FL370 is available.\"", "isCorrect": false, "feedback": "Incorrect. This creates a level-on-level, non-separated situation with BAW115." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "RYR789 replies, \"Roger, unable, maintaining FL380.\" Now, BAW115 (FL370) requests a climb: \"Madrid, BAW115, request FL390, turbulence.\"",
+        "options": [
+          { "id": "A", "text": "Approve. \"BAW115, climb and maintain FL390.\"", "isCorrect": false, "feedback": "Incorrect. This climbs BAW115 *through* RYR789's level (FL380)." },
+          { "id": "B", "text": "Deny. \"BAW115, unable, maintain FL370.\"", "isCorrect": false, "feedback": "Partial. This is safe but unhelpful." },
+          { "id": "C", "text": "Deny and inform, offer later. \"BAW115, unable climb due traffic RYR789, 10 o'clock, 10 miles, FL380. Expect climb in 2 minutes.\"", "isCorrect": true, "feedback": "Correct. This explains the denial, provides the traffic, and manages the pilot's expectations, which is high-level service." },
+          { "id": "D", "text": "Turn BAW115. \"BAW115, turn left heading 260, then climb FL390.\"", "isCorrect": false, "feedback": "Incorrect. This is inefficient and vectors them off their oceanic track." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "The aircraft are now past the crossing point. BAW115 is 10 NM past RYR789's track.",
+        "options": [
+          { "id": "A", "text": "Proactively clear BAW115. \"BAW115, traffic no factor, climb and maintain FL390.\"", "isCorrect": true, "feedback": "Correct. This shows you remembered the pilot's request and are clearing them as soon as it's safe." },
+          { "id": "B", "text": "Wait for BAW115 to ask again.", "isCorrect": false, "feedback": "Incorrect. This is poor service." },
+          { "id": "C", "text": "Clear RYR789 to descend. \"RYR789, traffic no factor, descend and maintain FL360.\"", "isCorrect": false, "feedback": "Partial. This is a good action, but BAW115's pending request is the more immediate item." },
+          { "id": "D", "text": "Handoff BAW115 to Santa Maria. \"BAW115, contact Santa Maria 127.9.\"", "isCorrect": false, "feedback": "Incorrect. You must resolve the pending altitude request *before* handoff." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_010",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Singapore ACC",
+    "title": "Singapore: ADS-C Failure & Procedural Separation",
+    "description": "Manage an aircraft whose ADS-C and CPDLC connection fails in a procedural, non-radar part of the FIR, requiring a revert to HF and procedural separation.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "You receive a 'DATA LINK LOST' alert for QFA12 (FL360) in your procedural sector. Their ADS-C reports stop.",
+        "options": [
+          { "id": "A", "text": "Do nothing. The system will likely reconnect.", "isCorrect": false, "feedback": "Incorrect. This is a passive and unsafe assumption." },
+          { "id": "B", "text": "Attempt to re-establish CPDLC connection via a 'CONTACT' message.", "isCorrect": false, "feedback": "Partial. This is a good first technical step, but it doesn't address the separation problem." },
+          { "id": "C", "text": "Update the flight strip to 'Data Link Failed'. Switch to monitoring HF position reports at the next compulsory reporting point.", "isCorrect": true, "feedback": "Correct. You must immediately note the failure and revert to the backup system, which is procedural control via HF voice reports." },
+          { "id": "D", "text": "Vector all other traffic away from QFA12's track.", "isCorrect": false, "feedback": "Incorrect. This is an overreaction and would cause massive disruption." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "QFA12 is due at waypoint 'ANPAG' at 14:30Z. You must ensure procedural separation with UAE44 (FL360), 15 minutes behind QFA12.",
+        "options": [
+          { "id": "A", "text": "Contact UAE44 (who has a good data link) and issue speed. \"UAE44, reduce speed to Mach point eight zero.\"", "isCorrect": true, "feedback": "Correct. With QFA12's data link down, you can't control them. You must control the aircraft *behind* them to ensure the 15-minute procedural separation is not eroded." },
+          { "id": "B", "text": "Contact UAE44 and instruct them to climb. \"UAE44, climb and maintain FL380.\"", "isCorrect": false, "feedback": "Incorrect. This could conflict with other traffic, and the primary separation is longitudinal." },
+          { "id": "C", "text": "Call QFA12 on the HF emergency frequency (121.5) and order them to climb.", "isCorrect": false, "feedback": "Incorrect. 121.5 is for emergencies. Their data link failing is not a "distress" situation." },
+          { "id": "D", "text": "Assume QFA12 will maintain speed and separation will be fine.", "isCorrect": false, "feedback": "Incorrect. 'Assume' is the most dangerous word in ATC." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "QFA12 calls on the sector's HF frequency: \"Singapore Radio, QFA12, position ANPAG 1430, FL360, estimating 'BETNO' 1510.\"",
+        "options": [
+          { "id": "A", "text": "Acknowledge. \"QFA12, Singapore, roger.\"", "isCorrect": false, "feedback": "Partial. This is a weak readback. A full readback is required." },
+          { "id": "B", "text": "Scold the pilot. \"QFA12, your data link is down, you should have called earlier.\"", "isCorrect": false, "feedback": "Incorrect. Unprofessional and does not solve the problem." },
+          { "id": "C", "text": "Acknowledge and confirm. \"QFA12, Singapore copies, ANPAG 1430, FL360, estimating BETNO 1510. Report BETNO.\"", "isCorrect": true, "feedback": "Correct. This is the standard ICAO procedural readback, confirming the report and giving the next instruction (report at BETNO)." },
+          { "id": "D", "text": "Give a new clearance. \"QFA12, report passing all waypoints.\"", "isCorrect": false, "feedback": "Incorrect. This is an unnecessary increase in pilot workload." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "With the HF report, you confirm QFA12's estimate. Your speed restriction on UAE44 has maintained 16 minutes' separation.",
+        "options": [
+          { "id": "A", "text": "Cancel UAE44's speed restriction. \"UAE44, resume normal speed.\"", "isCorrect": true, "feedback": "Correct. Now that positive procedural separation is confirmed via the HF report, the restriction on UAE44 is no longer required." },
+          { "id": "B", "text": "Keep the speed restriction on UAE44.", "isCorrect": false, "feedback": "Incorrect. This is inefficient and penalizes the aircraft unnecessarily." },
+          { "id": "C", "text": "Tell QFA12 to speed up. \"QFA12, via HF, increase to Mach point eight two.\"", "isCorrect": false, "feedback": "Incorrect. You are controlling the aircraft behind, not the one in front." },
+          { "id": "D", "text": "Handoff both aircraft to Jakarta. \"QFA12, contact Jakarta 132.5.\" \"UAE44, contact Jakarta 132.5.\"", "isCorrect": false, "feedback": "Incorrect. You must coordinate the HF-only status of QFA12 with Jakarta *before* transfer." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_011",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "ZLA (Los Angeles Center)",
+    "title": "ZLA: Handoff and Altitude Discrepancy",
+    "description": "Handle a handoff from an adjacent center (ZAB) where the aircraft's data block does not match their assigned altitude.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "ZAB (Albuquerque) flashes SWA55 at FL370. You accept the handoff. The SWA55 data block now shows 'A370' but 'C380' (Climbing to FL380).",
+        "options": [
+          { "id": "A", "text": "Do nothing. Assume the data block is correct and they are climbing to FL380.", "isCorrect": false, "feedback": "Incorrect. This is a discrepancy that must be resolved." },
+          { "id": "B", "text": "Call ZAB on the landline. \"ZAB, ZLA, check SWA55 altitude. You flashed 370, data block shows climbing to 380.\"", "isCorrect": true, "feedback": "Correct. The handoff must be verified. This is an inter-center coordination issue." },
+          { "id": "C", "text": "Assume ZAB made a mistake and manually change the data block to A370.", "isCorrect": false, "feedback": "Incorrect. Never assume; always verify. Modifying the data block without confirmation is dangerous." },
+          { "id": "D", "text": "Wait for SWA55 to check in on your frequency.", "isCorrect": false, "feedback": "Partial. You will do this, but the coordination with ZAB must happen *before* or *during* this to resolve the ambiguity." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "ZAB confirms, \"Sorry, SWA55 was climbing to 380, clearance just given.\" SWA55 now checks in: \"Los Angeles Center, SWA55, level FL370 climbing to FL380.\"",
+        "options": [
+          { "id": "A", "text": "Acknowledge. \"SWA55, Los Angeles Center, roger.\"", "isCorrect": false, "feedback": "Incorrect. This is not ICAO standard. 'Roger' is weak, and 'radar contact' is missing." },
+          { "id": "B", "text": "Acknowledge and verify. \"SWA55, Los Angeles Center, radar contact. Confirm climbing to FL380.\"", "isCorrect": true, "feedback": "Correct. This acknowledges the aircraft, confirms radar identity, and explicitly verifies the climbing altitude, closing the loop on the discrepancy." },
+          { "id": "C", "text": "Stop the climb. \"SWA55, Los Angeles Center, maintain FL370.\"", "isCorrect": false, "feedback": "Incorrect. You've already coordinated with ZAB that FL380 is the correct altitude. Stopping them is confusing." },
+          { "id": "D", "text": "Ask their altitude. \"SWA55, Los Angeles Center, say altitude.\"", "isCorrect": false, "feedback": "Incorrect. The pilot just reported their altitude. Asking again is redundant." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "SWA55 is now level at FL380. You see a conflict in 10 minutes with DAL90, also at FL380, merging onto the same airway.",
+        "options": [
+          { "id": "A", "text": "Descend SWA55. \"SWA55, descend and maintain FL360.\"", "isCorrect": false, "feedback": "Partial. This is a solution, but it's often better to move the aircraft that has not just been re-cleared." },
+          { "id": "B", "text": "Turn SWA55. \"SWA55, turn right heading 310.\"", "isCorrect": false, "feedback": "Incorrect. This is a vector off an airway, which may be inefficient." },
+          { "id":C_": "Issue speed control. \"SWA55, reduce speed to Mach point seven eight.\"", "isCorrect": true, "feedback": "Correct. This is the least disruptive way to manage an in-trail merge conflict. Slowing the trailing aircraft (SWA55) will create space." },
+          { "id": "D", "text": "Climb SWA55. \"SWA55, climb and maintain FL400.\"", "isCorrect": false, "feedback": "Incorrect. The pilot just leveled at FL380; another climb is poor service unless requested." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "The speed restriction has created 20 NM spacing. Both SWA55 and DAL90 are now established on the airway.",
+        "options": [
+          { "id": "A", "text": "Keep the speed restriction on SWA55.", "isCorrect": false, "feedback": "Incorrect. The restriction is no longer needed and should be removed." },
+          { "id": "B", "text": "Cancel the restriction. \"SWA55, resume normal speed.\"", "isCorrect": true, "feedback": "Correct. Once the restriction's purpose is met, it should be canceled to allow for pilot/FMS efficiency." },
+          { "id": "C", "text": "Slow down DAL90. \"DAL90, reduce speed to Mach point seven eight.\"", "isCorrect": false, "feedback": "Incorrect. This is the opposite of what's needed." },
+          { "id": "D", "text": "Vector SWA55. \"SWA55, fly heading 300.\"", "isCorrect": false, "feedback": "Incorrect. The conflict is resolved." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_012",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "ZOB (Cleveland Center)",
+    "title": "ZOB: Data Link Coordination (Toronto)",
+    "description": "Use data link 'Advance Coordination' (ADC) to send a flight to Toronto Center (CYYZ) at an altitude different from the standing agreement.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "ACA880 (FL350) is northbound. The standing agreement with CYYZ is that all traffic on this airway crosses the border at FL350. The pilot requests FL370.",
+        "options": [
+          { "id": "A", "text": "Approve. \"ACA880, climb and maintain FL370.\"", "isCorrect": false, "feedback": "Incorrect. This violates the standing agreement with CYYZ without coordination." },
+          { "id": "B", "text": "Deny. \"ACA880, unable FL370, maintain FL350.\"", "isCorrect": false, "feedback": "Partial. This is safe, but unhelpful. You should attempt to coordinate the pilot's request." },
+          { "id": "C", "text": "Acknowledge and initiate coordination. \"ACA880, standby.\" Send an 'ADC' data link message to CYYZ proposing FL370 for ACA880.", "isCorrect": true, "feedback": "Correct. This is the proper procedure. 'Standby' tells the pilot you're working on it, and the ADC message is the formal coordination." },
+          { "id": "D", "text": "Call CYYZ on the landline.", "isCorrect": false, "feedback": "Partial. While this works, data link (ADC) is the modern, preferred method and reduces voice calls." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "CYYZ sends a data link response: 'ACCEPT'.",
+        "options": [
+          { "id": "A", "text": "Do nothing. The 'ACCEPT' message is for your information only.", "isCorrect": false, "feedback": "Incorrect. The 'ACCEPT' message is the green light to issue the clearance." },
+          { "id": "B", "text": "Issue the clearance. \"ACA880, climb and maintain FL370.\"", "isCorrect": true, "feedback": "Correct. Coordination is complete and accepted. The clearance can now be given to the pilot." },
+          { "id": "C", "text": "Tell the pilot to call Toronto. \"ACA880, contact Toronto Center, they will give you the climb.\"", "isCorrect": false, "feedback": "Incorrect. This is "passing the buck". You are the controller; you must issue the clearance in your airspace." },
+          { "id": "D", "text": "Wait until ACA880 is closer to the border.", "isCorrect": false, "feedback": "Incorrect. The clearance is approved; delaying it serves no purpose." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "ACA880 is climbing to FL370. An opposite-direction traffic, UAL45, is at FL360. You must ensure separation.",
+        "options": [
+          { "id": "A", "text": "Issue traffic. \"ACA880, traffic 12 o'clock, 10 miles, opposite direction, FL360.\"", "isCorrect": true, "feedback": "Correct. Even with 1000 feet separation, issuing a traffic advisory on a climbing aircraft to opposite traffic is good procedure." },
+          { "id": "B", "text": "Stop ACA880's climb. \"ACA880, stop climb FL350.\"", "isCorrect": false, "feedback": "Incorrect. This is an overreaction. 1000 feet is legal separation." },
+          { "id": "C", "text": "Descend UAL45. \"UAL45, descend and maintain FL340.\"", "isCorrect": false, "feedback": "Incorrect. Unnecessary movement of an uninvolved aircraft." },
+          { "id": "D", "text": "Do nothing. They are 1000 feet apart.", "isCorrect": false, "feedback": "Partial. While legally separated, not issuing a traffic advisory in a climb-through scenario is poor practice." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "ACA880 reports level at FL370, past the traffic, and approaching the CYYZ border.",
+        "options": [
+          { "id": "A", "text": "Handoff. \"ACA880, contact Toronto Center 133.4.\"", "isCorrect": true, "feedback": "Correct. The altitude is coordinated, the aircraft is level, and it's at the boundary. This is a standard handoff." },
+          { "id": "B", "text": "Call CYYZ again to confirm the handoff.", "isCorrect": false, "feedback": "Incorrect. The 'ACCEPT' data link message and the automated handoff flash are sufficient." },
+          { "id": "C", "text": "Wait for the pilot to report the border.", "isCorrect": false, "feedback": "Incorrect. This is passive control." },
+          { "id": "D", "text": "Descend ACA880 back to FL350. \"ACA880, descend and maintain FL350.\"", "isCorrect": false, "feedback": "Incorrect. The climb to FL370 was approved and coordinated." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_013",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Shanwick Oceanic",
+    "title": "Shanwick: Loss of Separation (Procedural)",
+    "description": "Identify and resolve a procedural loss of separation due to a pilot's gross navigational error (GNE).",
+    "steps": [
+      {
+        "id": 1,
+        "description": "VIR1 (FL360) on Track 'Bravo' makes an HF call: \"Shanwick, VIR1, position 55N 20W at 11:30, FL360, estimating 55N 30W at 12:15.\" Your data shows they should be at 56N 20W.",
+        "options": [
+          { "id": "A", "text": "Acknowledge the report. \"VIR1, roger, report 55N 30W.\"", "isCorrect": false, "feedback": "Incorrect. This ignores a 60-mile (1 degree) lateral deviation, which is a GNE." },
+          { "id": "B", "text": "Query the pilot. \"VIR1, confirm position 55N 20W. Your cleared track is 'Bravo'.\"", "isCorrect": true, "feedback": "Correct. The first step is to challenge the pilot and confirm the position report, as it indicates a massive error." },
+          { "id": "C", "text": "Order them to climb. \"VIR1, immediately climb FL380.\"", "isCorrect": false, "feedback": "Incorrect. This is a panic reaction without confirming the problem or checking for traffic." },
+          { "id": "D", "text": "Manually update the strip. The pilot must be correct.", "isCorrect": false, "feedback": "Incorrect. The FMS/INS is usually correct, but the pilot's data entry can be wrong. The discrepancy IS the problem." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "VIR1 replies, \"Affirm, 55N 20W. We had an FMS input error.\" This position puts them on Track 'Alpha', which has traffic (BAW212) at FL360, 80 NM ahead.",
+        "options": [
+          { "id": "A", "text": "Issue new clearance. \"VIR1, cleared direct 56N 30W to rejoin Track Bravo, maintain FL360.\"", "isCorrect": false, "feedback": "Incorrect. This is unsafe. It does not resolve the conflict with BAW212, which is now on their *new* track." },
+          { "id": "B", "text": "Issue altitude change. \"VIR1, immediately descend and maintain FL340. Report reaching.\"", "isCorrect": true, "feedback": "Correct. The aircraft is on an unauthorized track and in conflict. The only immediate solution is vertical separation." },
+          { "id": "C", "text": "Tell them to turn around. \"VIR1, turn 180 degrees.\"", "isCorrect": false, "feedback": "Incorrect. This is non-standard and could conflict with traffic behind them." },
+          { "id": "D", "text": "Contact BAW212. \"BAW212, traffic VIR1, 80 miles behind, deviating, advise.\"", "isCorrect": false, "feedback": "Incorrect. You must control the deviating aircraft (VIR1), not the compliant one." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "VIR1 reports 'Reaching FL340'. They are now vertically separated from Track 'Alpha'.",
+        "options": [
+          { "id": "A", "text": "Now clear them back to their track. \"VIR1, cleared direct 56N 40W to rejoin Track Bravo, maintain FL340.\"", "isCorrect": true, "feedback": "Correct. They are now at a safe altitude. The next step is to get them back on *a* cleared route, and rejoining their original track is the most logical." },
+          { "id": "B", "text": "Let them continue on Track 'Alpha' at FL340.", "isCorrect": false, "feedback": "Partial. This is safe, but it's not their cleared route. It's better to get them back on track." },
+          { "id": "C", "text": "Clear them to climb back to FL360.", "isCorrect": false, "feedback": "Incorrect. This would put them back in conflict with Track 'Alpha'." },
+          { "id": "D", "text": "Ask them for their intentions. \"VIR1, say intentions.\"", "isCorrect": false, "feedback": "Incorrect. The controller must provide the clearance, not the pilot." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "VIR1 is established on the new clearance, maintaining FL340, and rejoining Track 'Bravo'.",
+        "options": [
+          { "id": "A", "text": "File a report. No further action needed.", "isCorrect": false, "feedback": "Partial. A report is mandatory, but you must also coordinate." },
+          { "id": "B", "text": "Coordinate the new altitude (FL340) with Gander (the next sector) via data link or voice.", "isCorrect": true, "feedback": "Correct. The aircraft will now be at a non-standard altitude for this track. The next center MUST be advised of the change." },
+          { "id": "C", "text": "Clear VIR1 to climb to FL360 once past the Track 'Alpha' traffic.", "isCorrect": false, "feedback": "Partial. This is a good idea, but the *mandatory* next step is coordinating the non-standard level with Gander." },
+          { "id": "D", "text": "Forget the incident. The pilot corrected.", "isCorrect": false, "feedback": "Incorrect. A GNE (Gross Navigational Error) is a serious incident that requires reporting and coordination." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_014",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Madrid ACC",
+    "title": "Madrid: Oceanic Clearance Data Link Error",
+    "description": "Resolve a discrepancy where the Oceanic Clearance (OCL) received by the pilot via data link does not match the domestic flight plan.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "TAP123 (FL350) is approaching the oceanic boundary. Their flight plan shows OEP 'SONNI' at FL350. The pilot calls: \"Madrid, TAP123, our CPDLC Oceanic Clearance shows OEP 'RONKO' at FL370. Please advise.\"",
+        "options": [
+          { "id": "A", "text": "Tell the pilot to follow the OCL. \"TAP123, roger, follow the CPDLC clearance.\"", "isCorrect": false, "feedback": "Incorrect. This is a major discrepancy. The domestic controller cannot accommodate a different track and level without coordination." },
+          { "id": "B", "text": "Tell the pilot the OCL is wrong. \"TAP123, your clearance is incorrect. Standby.\" Call Santa Maria to coordinate.", "isCorrect": true, "feedback": "Correct. The pilot has identified a conflict. The controller must stop, acknowledge, and coordinate with the OACC (Santa Maria) to fix it." },
+          { "id": "C", "text": "Re-clear the pilot. \"TAP123, disregard that, cleared direct SONNI, maintain FL350.\"", "isCorrect": false, "feedback": "Incorrect. This tells the pilot to ignore a clearance from the OACC, which is a major procedural violation." },
+          { "id": "D", "text": "Tell the pilot to call Santa Maria.", "isCorrect": false, "feedback": "Incorrect. The aircraft is still in your airspace; it's your responsibility to coordinate." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "You call Santa Maria, who states the 'RONKO' clearance was for a different flight. They will issue a new OCL to TAP123 via data link.",
+        "options": [
+          { "id": "A", "text": "Advise the pilot. \"TAP123, Santa Maria made an error. Expect a new CPDLC clearance shortly. Maintain FL350 and track for SONNI.\"", "isCorrect": true, "feedback": "Correct. This informs the pilot of the situation, tells them what to expect (new OCL), and confirms their current clearance." },
+          { "id": "B", "text": "Do nothing. Wait for the pilot to get the new clearance.", "isCorrect": false, "feedback": "Incorrect. The pilot is waiting for instructions from you." },
+          { "id": "C", "text": "Vector the pilot. \"TAP123, fly heading 270.\"", "isCorrect": false, "feedback": "Incorrect. There is no need to vector. The pilot is on the correct track." },
+          { "id": "D", "text": "Give the clearance yourself. \"TAP123, cleared to KJFK via SONNI, FL350...\"", "isCorrect": false, "feedback": "Incorrect. You cannot issue an oceanic clearance; only the OACC can." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "TAP123 calls back: \"Madrid, we have the new OCL via CPDLC. Cleared via SONNI, FL350, Mach point eight zero.\"",
+        "options": [
+          { "id": "A", "text": "Acknowledge. \"TAP123, roger.\"", "isCorrect": false, "feedback": "Partial. This is a weak acknowledgment." },
+          { "id": "B", "text": "Verify and handoff. \"TAP123, that is correct. Contact Santa Maria 127.9.\"", "isCorrect": true, "feedback": "Correct. The domestic controller's job is to verify the OCL matches the flight plan. It now does. The aircraft can be handed off." },
+          { "id": "C", "text": "Ask them to read it all back.", "isCorrect": false, "feedback": "Incorrect. A full readback is not required, as the pilot is just confirming the new clearance matches the domestic plan." },
+          { "id": "D", "text": "Tell them to maintain FL350. \"TAP123, roger, maintain FL350.\"", "isCorrect": false, "feedback": "Incorrect. The final handoff instruction is missing." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "The aircraft is 5 minutes from the boundary and has been handed off to Santa Maria.",
+        "options": [
+          { "id": "A", "text": "This is a 'controller action' step. No action is required. Monitor the transfer.", "isCorrect": true, "feedback": "Correct. The conflict is resolved, the clearance is verified, and the handoff is complete. The controller's job is to monitor the aircraft until it leaves the frequency." },
+          { "id": "B", "text": "Call Santa Maria again to 'make sure'.", "isCorrect": false, "feedback": "Incorrect. Unnecessary voice call." },
+          { "id": "C", "text": "Call the pilot back. \"TAP123, confirm you are talking to Santa Maria.\"", "isCorrect": false, "feedback": "Incorrect. Unnecessary. The data block will show the frequency change." },
+          { "id": "D", "text": "File a report against the pilot.", "isCorrect": false, "feedback": "Incorrect. The pilot did the correct thing by reporting the discrepancy." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gpt_center_015",
+    "category": "center",
+    "difficulty": "advanced",
+    "airspace": "Singapore ACC",
+    "title": "Singapore: Multi-FIR Weather Deviation",
+    "description": "Manage a weather deviation that crosses multiple FIR boundaries (Singapore, Kuala Lumpur, Jakarta) using data link.",
+    "steps": [
+      {
+        "id": 1,
+        "description": "SIA45 (FL370) is on the boundary with Kuala Lumpur (WMFC). Pilot sends CPDLC: 'REQ DEVIATION 40NM LEFT DUE WX'. This deviation will cross into WMFC, then into Jakarta (WIIF) airspace.",
+        "options": [
+          { "id": "A", "text": "Approve. Send CPDLC: 'DEVIATION 40NM LEFT APPROVED'.", "isCorrect": false, "feedback": "Incorrect. This approves a deviation into two other FIRs without coordination." },
+          { "id": "B", "text": "Deny. Send CPDLC: 'UNABLE DEVIATION'.", "isCorrect": false, "feedback": "Incorrect. This is unsafe for a weather request." },
+          { "id": "C", "text": "Acknowledge and coordinate. Send CPDLC: 'STDBY'. Initiate ADC data link coordination with WMFC and WIIF.", "isCorrect": true, "feedback": "Correct. This is a complex coordination that *must* be approved by all affected FIRs." },
+          { "id":D_": "Clear them to a lower altitude. Send CPDLC: 'UNABLE, DESCEND FL330'.", "isCorrect": false, "feedback": "Incorrect. This doesn't solve the lateral weather problem." }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "WMFC replies 'ACCEPT'. WIIF (Jakarta) replies 'UNABLE DUE TRAFFIC'.",
+        "options": [
+          { "id": "A", "text": "Approve a partial deviation. Send CPDLC: 'DEVIATION UP TO 20NM LEFT APPROVED. UNABLE 40NM DUE JAKARTA TRAFFIC.'", "isCorrect": true, "feedback": "Correct. This provides the pilot with the maximum available, coordinated deviation, and explains the restriction." },
+          { "id": "B", "text": "Deny the whole request. Send CPDLC: 'UNABLE DEVIATION DUE JAKARTA TRAFFIC'.", "isCorrect": false, "feedback": "Partial. This is safe, but the pilot could have been given *some* deviation." },
+          { "id": "C", "text": "Tell WMFC to coordinate with WIIF.", "isCorrect": false, "feedback": "Incorrect. You are the controlling authority; it's your responsibility." },
+          { "id": "D", "text": "Approve the full deviation anyway. \"DEVIATION 40NM LEFT APPROVED\".", "isCorrect": false, "feedback": "Incorrect. This ignores Jakarta's denial and is extremely dangerous." }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "SIA45 replies 'WILCO' and begins the 20NM deviation. Jakarta (WIIF) now sends a data link message: 'TRAFFIC CLEAR, SIA45 MAY DEVIATE AS REQUESTED'.",
+        "options": [
+          { "id": "A", "text": "Do nothing. The pilot is already deviating.", "isCorrect": false, "feedback": "Incorrect. The pilot is restricted to 20NM. You now have new information." },
+          { "id": "B", "text": "Proactively update the pilot. Send CPDLC: 'JAKARTA TRAFFIC NOW NO FACTOR. DEVIATION UP TO 40NM LEFT NOW APPROVED.'", "isCorrect": true, "feedback": "Correct. This shows excellent situational awareness, closing the loop with the pilot and giving them the deviation they originally needed." },
+          { "id": "C", "text": "Wait for the pilot to ask again.", "isCorrect": false, "feedback": "Incorrect. This is poor, reactive service." },
+          { "id": "D", "text": "Tell the pilot to contact Jakarta.", "isCorrect": false, "feedback": "Incorrect. They are still in your airspace, and you are coordinating on their behalf." }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "SIA45 completes the deviation and sends CPDLC: 'RESUMING OWN NAVIGATION DIRECT VPL'. The aircraft is now in WMFC airspace, but you are still the controlling authority.",
+        "options": [
+          { "id": "A", "text": "Acknowledge and handoff. Send CPDLC: 'PROCEED DIRECT VPL'. Then: 'CONTACT KUALA LUMPUR 132.8'.", "isCorrect": true, "feedback": "Correct. You re-establish the route, then handoff the aircraft to the next FIR." },
+          { "id": "B", "text": "Handoff only. Send CPDLC: 'CONTACT KUALA LUMPUR 132.8'.", "isCorrect": false, "feedback": "Partial. You should first acknowledge/approve their 'resuming navigation' message." },
+          { "id": "C", "text": "Acknowledge only. Send CPDLC: 'PROCEED DIRECT VPL'.", "isCorrect": false, "feedback": "Partial. This is good, but the handoff is now required as they are established and in WMFC airspace." },
+          { "id": "D", "text": "Wait for them to be back in your airspace.", "isCorrect": false, "feedback": "Incorrect. The handoff should occur at the FIR boundary." }
+        ]
+      }
+    ]
+  }
+]
